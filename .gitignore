@@ -4,3 +4,4 @@
 params.json
 
 /venv
+/node_modules
