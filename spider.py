@@ -19,9 +19,11 @@ COOKIES = PARAMS["cookies"]
 
 def unique(l: List) -> List:
     res = []
+
     for item in l:
         if not item in res:
             res.append(item)
+
     return res
 
 
@@ -121,7 +123,7 @@ def download_problem_set(problem_set_id: str, dst: str) -> None:
         statement = problem['content'].replace(
             "```in", "```plaintext").replace("```out", "```plaintext")
 
-        statement = textwrap.dedent('''
+        statement = '''
 # {} {}
 
 ## Statement
@@ -135,7 +137,7 @@ def download_problem_set(problem_set_id: str, dst: str) -> None:
 
 {}
 
-                    '''.format(label, title, author, author_organization_name, code_size_limit, time_limit, memory_limit // 1024, statement))
+                    '''.format(label, title, author, author_organization_name, code_size_limit, time_limit, memory_limit // 1024, statement)
 
         statement_dst = os.path.join(current_dst, "statement.md")
         with open(statement_dst, "w") as f:
@@ -146,16 +148,15 @@ def download_problem_set(problem_set_id: str, dst: str) -> None:
 
         current_test_data_path = os.path.join(current_dst, "test-data")
         ensure_dir(current_test_data_path)
-        for i in range(len(example_test_data)):
+        for i, test_data in enumerate(example_test_data):
             current_in_dst = os.path.join(
                 current_test_data_path, "{}.in".format(i + 1))
             current_out_dst = os.path.join(
                 current_test_data_path, "{}.out".format(i + 1))
             with open(current_in_dst, "w") as f:
-                f.write(example_test_data[i]['input'])
-
+                f.write(test_data['input'])
             with open(current_out_dst, "w") as f:
-                f.write(example_test_data[i]['output'])
+                f.write(test_data['output'])
 
         if item['problemSubmissionStatus'] == "PROBLEM_ACCEPTED":
             last_submission_ext = get_lang_ext(
