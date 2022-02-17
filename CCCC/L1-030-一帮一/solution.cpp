@@ -1,19 +1,19 @@
-#include <cstdio>
-#include <cstring>
 #include <ctype.h>
-#include <cstdlib>
-#include <iostream>
 #include <algorithm>
 #include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <deque>
-#include <vector>
-#include <queue>
-#include <string>
+#include <iostream>
 #include <map>
-#include <stack>
-#include <set>
 #include <numeric>
+#include <queue>
+#include <set>
 #include <sstream>
+#include <stack>
+#include <string>
+#include <vector>
 
 using namespace std;
 typedef long long LL;
@@ -27,41 +27,34 @@ const int MINN = 0xc0c0c0c0;
 const int maxn = 1e5 + 5;
 const int MOD = 1e9 + 7;
 
-struct Node
-{
-	string name;
-	int sex;
-}temp;
+struct Node {
+    string name;
+    int sex;
+} temp;
 
-int main()
-{
-	int n;
-	cin >> n;
-	vector <Node> F, M, V;
-	F.clear();
-	M.clear();
-	V.clear();
-	for (int i = 0; i < n; i++)
-	{
-		cin >> temp.sex >> temp.name;
-		if (temp.sex == 1)
-			M.push_back(temp);
-		else
-			F.push_back(temp);
-		V.push_back(temp);
-	}
-	n /= 2;
-	for (int i = 0; i < n; i++)
-	{
-		if (V[i].sex == 1)
-		{
-			cout << V[i].name << " " << F[F.size() - 1].name << endl;
-			F.pop_back();
-		}
-		else
-		{
-			cout << V[i].name << " " << M[M.size() - 1].name << endl;
-			M.pop_back();
-		}
-	}
+int main() {
+    int n;
+    cin >> n;
+    vector<Node> F, M, V;
+    F.clear();
+    M.clear();
+    V.clear();
+    for (int i = 0; i < n; i++) {
+        cin >> temp.sex >> temp.name;
+        if (temp.sex == 1)
+            M.push_back(temp);
+        else
+            F.push_back(temp);
+        V.push_back(temp);
+    }
+    n /= 2;
+    for (int i = 0; i < n; i++) {
+        if (V[i].sex == 1) {
+            cout << V[i].name << " " << F[F.size() - 1].name << endl;
+            F.pop_back();
+        } else {
+            cout << V[i].name << " " << M[M.size() - 1].name << endl;
+            M.pop_back();
+        }
+    }
 }

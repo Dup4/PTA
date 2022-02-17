@@ -12,9 +12,11 @@ bool isPunc(char ch) {
 }
 
 bool match(string &s, int l, int r, string &t) {
-    if (SZ(t) != r - l + 1 || l < 0 || r >= SZ(s)) return false;
+    if (SZ(t) != r - l + 1 || l < 0 || r >= SZ(s))
+        return false;
     for (int i = l, j = 0; i <= r; ++i, ++j) {
-        if (s[i] != t[j]) return false;
+        if (s[i] != t[j])
+            return false;
     }
     return true;
 }
@@ -34,7 +36,8 @@ string delSpace(string &s) {
         if (s[i] == ' ') {
             ++num;
         } else {
-            if (num && !isPunc(s[i])) res += " ";
+            if (num && !isPunc(s[i]))
+                res += " ";
             res += s[i];
             num = 0;
         }
@@ -58,25 +61,31 @@ string change(string &s, vector<pSS> vec) {
             int ok = 0;
             for (auto &it : vec) {
                 int len = SZ(it.fi);
-                if (match(s, i + 1, i + len, it.fi) && (i + len + 1 == SZ(s) || isPunc(s[i + len + 1]) || s[i + len + 1] == ' ')) {
-                    if (i != -1) res += s[i];
+                if (match(s, i + 1, i + len, it.fi) &&
+                        (i + len + 1 == SZ(s) || isPunc(s[i + len + 1]) || s[i + len + 1] == ' ')) {
+                    if (i != -1)
+                        res += s[i];
                     res += it.se;
                     i += len;
                     ok = 1;
                     break;
                 }
             }
-            if (ok) continue;
+            if (ok)
+                continue;
         }
-        if (i != -1) res += s[i];
+        if (i != -1)
+            res += s[i];
     }
     return res;
 }
 
 int main() {
     ios::sync_with_stdio(false);
-    cin.tie(0); cout.tie(0);
-    int _T; cin >> _T;
+    cin.tie(0);
+    cout.tie(0);
+    int _T;
+    cin >> _T;
     string s;
     getline(cin, s);
     while (_T--) {
@@ -88,8 +97,10 @@ int main() {
         s = change(s, vector<pSS>({pSS("can you", "@ can"), pSS("could you", "@ could")}));
         s = change(s, vector<pSS>({pSS("I", "you"), pSS("me", "you")}));
         for (int i = 0; i < SZ(s); ++i) {
-            if (s[i] == '?') s[i] = '!';
-            if (s[i] == '@') s[i] = 'I';
+            if (s[i] == '?')
+                s[i] = '!';
+            if (s[i] == '@')
+                s[i] = 'I';
         }
         cout << "AI: " + s << endl;
     }

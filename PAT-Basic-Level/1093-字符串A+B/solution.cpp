@@ -7,22 +7,21 @@ using namespace std;
 #define N 100010
 #define fi first
 #define se second
-#define pii pair <int, int>
+#define pii pair<int, int>
 string a, b;
 int mp[1100];
 
-int main()
-{
-	getline(cin, a);
-	getline(cin, b);
-	memset(mp, 0, sizeof mp);
-	a += b;
-	for (int i = 0, len = a.size(); i < len; ++i)
-	{
-		if (mp[a[i]]) continue;
-		mp[a[i]] = 1;
-		putchar(a[i]);
-	}
-	puts("");
-	return 0;
+int main() {
+    getline(cin, a);
+    getline(cin, b);
+    memset(mp, 0, sizeof mp);
+    a += b;
+    for (int i = 0, len = a.size(); i < len; ++i) {
+        if (mp[a[i]])
+            continue;
+        mp[a[i]] = 1;
+        putchar(a[i]);
+    }
+    puts("");
+    return 0;
 }

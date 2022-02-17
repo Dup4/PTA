@@ -1,19 +1,19 @@
-#include <iostream>
-#include <cstdio>
+#include <ctype.h>
 #include <algorithm>
 #include <cmath>
-#include <deque>
-#include <vector>
-#include <queue>
-#include <string>
-#include <cstring>
-#include <map>
-#include <stack>
-#include <set>
+#include <cstdio>
 #include <cstdlib>
-#include <ctype.h>
+#include <cstring>
+#include <deque>
+#include <iostream>
+#include <map>
 #include <numeric>
+#include <queue>
+#include <set>
 #include <sstream>
+#include <stack>
+#include <string>
+#include <vector>
 using namespace std;
 
 typedef long long LL;
@@ -26,51 +26,36 @@ const int maxn = 1e2 * 5 + 5;
 const int MOD = 1e9 + 7;
 int a[23] = {1};
 char c;
-void print(int n, int cur)
-{
-	if (n == 1)
-	{
-		while (cur --)
-			printf(" ");
-		printf("%c\n", c);
-	}
-	else
-	{
-		for (int i = 0; i < cur; i++)
-			printf(" ");
-		for (int i = 0; i < n; i++)
-			printf("%c", c);
-		printf("\n");
-		print(n - 2, cur + 1);
-		for (int i = 0; i < cur; i++)
-			printf(" ");
-		for (int i = 0; i < n; i++)
-			printf("%c", c);
-		printf("\n");
-	}
+void print(int n, int cur) {
+    if (n == 1) {
+        while (cur--) printf(" ");
+        printf("%c\n", c);
+    } else {
+        for (int i = 0; i < cur; i++) printf(" ");
+        for (int i = 0; i < n; i++) printf("%c", c);
+        printf("\n");
+        print(n - 2, cur + 1);
+        for (int i = 0; i < cur; i++) printf(" ");
+        for (int i = 0; i < n; i++) printf("%c", c);
+        printf("\n");
+    }
 }
 
-int main()
-{
-	int i, j;
-	for (i = 1, j = 3; i < 23; i++, j += 2)
-		a[i] += j * 2 + a[i - 1];
-	int n;
-	scanf("%d %c", &n, &c);
-	int vis;
-	for (i = 0 ; i < 23; i++)
-	{
-		if (a[i] > n)
-		{
-			vis = i - 1;
-			break;
-		}	
-		else if (a[i] == n)
-		{
-			vis = i;
-			break;
-		}	
-	}
-	print((vis + 1) * 2 - 1, 0);
-	cout << n - a[vis] << endl;
+int main() {
+    int i, j;
+    for (i = 1, j = 3; i < 23; i++, j += 2) a[i] += j * 2 + a[i - 1];
+    int n;
+    scanf("%d %c", &n, &c);
+    int vis;
+    for (i = 0; i < 23; i++) {
+        if (a[i] > n) {
+            vis = i - 1;
+            break;
+        } else if (a[i] == n) {
+            vis = i;
+            break;
+        }
+    }
+    print((vis + 1) * 2 - 1, 0);
+    cout << n - a[vis] << endl;
 }

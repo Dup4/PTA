@@ -5,7 +5,7 @@ int main() {
     int n, cnt = 0;
     cin >> password >> n;
     getchar();
-    while(1) {
+    while (1) {
         getline(cin, temp);
         if (temp != "#") {
             cnt++;

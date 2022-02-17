@@ -1,19 +1,19 @@
-#include <iostream>
-#include <cstdio>
+#include <ctype.h>
 #include <algorithm>
 #include <cmath>
-#include <deque>
-#include <vector>
-#include <queue>
-#include <string>
-#include <cstring>
-#include <map>
-#include <stack>
-#include <set>
+#include <cstdio>
 #include <cstdlib>
-#include <ctype.h>
+#include <cstring>
+#include <deque>
+#include <iostream>
+#include <map>
 #include <numeric>
+#include <queue>
+#include <set>
 #include <sstream>
+#include <stack>
+#include <string>
+#include <vector>
 using namespace std;
 
 typedef long long LL;
@@ -25,9 +25,8 @@ const int MINN = 0xc0c0c0c0;
 const int maxn = 1e5 + 5;
 const int MOD = 1e9 + 7;
 
-int main()
-{
-	int n;
-	cin >> n;
-	printf("Celsius = %d\n", (int)(5.0 * (n - 32)/9));
+int main() {
+    int n;
+    cin >> n;
+    printf("Celsius = %d\n", (int)(5.0 * (n - 32) / 9));
 }

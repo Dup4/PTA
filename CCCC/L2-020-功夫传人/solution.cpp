@@ -1,23 +1,23 @@
-#include <cstdio>
-#include <cstring>
 #include <ctype.h>
-#include <cstdlib>
-#include <cmath>
-#include <climits>
-#include <ctime>
-#include <iostream>
 #include <algorithm>
+#include <climits>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
 #include <deque>
-#include <vector>
-#include <queue>
-#include <string>
-#include <map>
-#include <stack>
-#include <set>
-#include <numeric>
-#include <sstream>
 #include <iomanip>
+#include <iostream>
 #include <limits>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <vector>
 
 #define CLR(a) memset(a, 0, sizeof(a))
 #define pb push_back
@@ -26,8 +26,8 @@ using namespace std;
 typedef long long ll;
 typedef long double ld;
 typedef unsigned long long ull;
-typedef pair <int, int> pii;
-typedef pair <ll, ll> pll;
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
 typedef pair<string, int> psi;
 typedef pair<string, string> pss;
 
@@ -43,51 +43,43 @@ ll n;
 
 double z, r;
 
-struct Node
-{
-	int tot;
-	vector <int> v;
-}temp;
+struct Node {
+    int tot;
+    vector<int> v;
+} temp;
 
 ld ans = 0.0;
 
-vector <Node> d, da;
+vector<Node> d, da;
 
-void dfs(int x, int cur)
-{
-	if (d[x].tot == 0)
-	{
-		ans += z * pow(r, cur) * d[x].v[0];
-		return;
-	}
-	vector <int>::iterator it;
-	for (it = d[x].v.begin(); it != d[x].v.end(); it++)
-	{
-		dfs((*it), cur + 1);
-	}
+void dfs(int x, int cur) {
+    if (d[x].tot == 0) {
+        ans += z * pow(r, cur) * d[x].v[0];
+        return;
+    }
+    vector<int>::iterator it;
+    for (it = d[x].v.begin(); it != d[x].v.end(); it++) {
+        dfs((*it), cur + 1);
+    }
 }
 
-int main()
-{
-	int num;
-	scanf("%lld%lf%lf", &n, &z, &r);
-	r = (100 - r) * 1.0 / 100;
-	for (int i = 0; i < n; i++)
-	{
-		scanf("%d", &temp.tot);
-		temp.v.clear();
-		if (temp.tot == 0)
-		{
-			scanf("%d", &num);
-			temp.v.pb(num);
-		}
-		for (int j = 0; j < temp.tot; j++)
-		{
-			scanf("%d", &num);
-			temp.v.pb(num);
-		}
-		d.pb(temp);
-	}
-	dfs(0, 0);
-	printf("%.0Lf\n", ans - 0.5);
+int main() {
+    int num;
+    scanf("%lld%lf%lf", &n, &z, &r);
+    r = (100 - r) * 1.0 / 100;
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &temp.tot);
+        temp.v.clear();
+        if (temp.tot == 0) {
+            scanf("%d", &num);
+            temp.v.pb(num);
+        }
+        for (int j = 0; j < temp.tot; j++) {
+            scanf("%d", &num);
+            temp.v.pb(num);
+        }
+        d.pb(temp);
+    }
+    dfs(0, 0);
+    printf("%.0Lf\n", ans - 0.5);
 }
