@@ -34,8 +34,8 @@ bool dfs(int al, int ar, int bl, int br, int cl, int cr, int &rt) {
         int len = i - al;
         if (dfs(al, i - 1, bl + 1, bl + len, cl, cl + len - 1, son[i].fi) &&
                 dfs(i + 1, ar, bl + len + 1, br, cl + len, cr - 1, son[i].se)) {
-            //							cout << al << " " << ar << " " << bl << " " << br << " " << cl << " " << cr <<
-            //endl;
+            //							cout << al << " " << ar << " " << bl << " " << br << " " << cl << " " << cr
+            //<< endl;
             _a[i] = _b[bl] = _c[cr] = now;
             rt = i;
             return true;
