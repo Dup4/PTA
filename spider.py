@@ -178,7 +178,7 @@ def download_problem_set(problem_set_id: str, dst: str) -> None:
 def main() -> None:
     init_logging()
 
-    # download_problem_set("994805046380707840", "./CCCC")
+    download_problem_set("994805046380707840", "./CCCC")
     download_problem_set("994805260223102976", "./PAT-Basic-Level")
     download_problem_set("994805342720868352", "./PAT-Advanced-Level")
     download_problem_set("994805148990160896", "./PAT-Top-Level")
