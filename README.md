@@ -6,6 +6,7 @@
 ├── statement.md
 ├── tutorial.md
 ├── solution.cpp
+├── statement-assets
 └── test-data
     ├── *.in
     └── *.out
