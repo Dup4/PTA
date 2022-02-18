@@ -29,7 +29,7 @@ theme:
 
   features:
     - header.autohide
-    - navigation.instant
+    # - navigation.instant
     # - navigation.expand
     # - navigation.sections
     - navigation.tracking
