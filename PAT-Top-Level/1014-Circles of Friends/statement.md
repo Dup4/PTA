@@ -4,11 +4,11 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CHEN, Yue
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 1000 ms
-    内存限制: 64 MB
+    - 作者: CHEN, Yue
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 1000 ms
+    - 内存限制: 64 MB
 
 A circle of friends is a network of friend relationships. If A is a friend of B, then B is considered a friend of A no matter B admits or not, and they are said to belong to the same circle. Here we assume that friendship is transitive, that is, if A is a friend of B, and B is a friend of C, then A is a friend of C and the three of them all belong to the same circle.
 
@@ -16,19 +16,19 @@ On the other hand, A is not so close to C as B is. We define the distance D(X, Y
 
 Now given some people's relationships, you are supposed to find the number of friends circles and the circle with the largest diameter.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line gives an integer $$N$$ ($$2 \le N \le 1000$$), which is the total number of people involved, and hence they are numbered from 1 to $$N$$. Then $$N$$ lines follow, each in the format:
+Each input file contains one test case. For each case, the first line gives an integer $N$ ($2 \le N \le 1000$), which is the total number of people involved, and hence they are numbered from 1 to $N$. Then $N$ lines follow, each in the format:
 
-$$k$$ $$p_1$$ ... $$p_k$$
+$k$ $p_1$ ... $p_k$
 
-where $$k$$ ($$0 \le k < min(10, N)$$) is the number of friends and $$p_1$$ to $$p_k$$ (if $$k>0$$) are the friends' indices. The $$i$$-th line corresponds to the $$i$$-th person. All the numbers in a line are separated by spaces. It is guaranteed that no one is given as a friend of oneself.
+where $k$ ($0 \le k < min(10, N)$) is the number of friends and $p_1$ to $p_k$ (if $k>0$) are the friends' indices. The $i$-th line corresponds to the $i$-th person. All the numbers in a line are separated by spaces. It is guaranteed that no one is given as a friend of oneself.
 
-### Output Specification:
+**Output Specification**
 
 For each case, print in a line the number of friends circles, and the largest diameter, separated by exactly one space.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 17
 2 15 12
@@ -50,10 +50,9 @@ For each case, print in a line the number of friends circles, and the largest di
 1 2
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 4 3
 ```
-
 
 

@@ -4,11 +4,11 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CHEN, Yue
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 800 ms
-    内存限制: 64 MB
+    - 作者: CHEN, Yue
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 800 ms
+    - 内存限制: 64 MB
 
 As the manager of your company, you have to carefully consider, for each project, the time taken to finish it, the deadline, and the profit you can gain, in order to decide if your group should take this project. For example, given 3 projects as the following:
 
@@ -18,15 +18,15 @@ As the manager of your company, you have to carefully consider, for each project
 
 You may take Project[1] to gain 6 units of profit. But if you take Project[2] first, then you will have 1 day left to complete Project[3] just in time, and hence gain 7 units of profit in total. Notice that once you decide to work on a project, you have to do it from beginning to the end without any interruption.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line gives a positive integer $$N$$ ($$\le 50$$), and then followed by $$N$$ lines of projects, each contains three numbers $$P$$, $$L$$, and $$D$$ where $$P$$ is the profit, $$L$$ the lasting days of the project, and $$D$$ the deadline. It is guaranteed that $$L$$ is never more than $$D$$, and all the numbers are non-negative integers.
+Each input file contains one test case. For each case, the first line gives a positive integer $N$ ($\le 50$), and then followed by $N$ lines of projects, each contains three numbers $P$, $L$, and $D$ where $P$ is the profit, $L$ the lasting days of the project, and $D$ the deadline. It is guaranteed that $L$ is never more than $D$, and all the numbers are non-negative integers.
 
-### Output Specification:
+**Output Specification**
 
 For each test case, output in a line the maximum profit you can gain.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 4
 7 1 3
@@ -35,8 +35,7 @@ For each test case, output in a line the maximum profit you can gain.
 5 1 1
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 18
 ```
-

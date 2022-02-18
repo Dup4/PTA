@@ -4,11 +4,11 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: 陈越
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 200 ms
-    内存限制: 64 MB
+    - 作者: 陈越
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 200 ms
+    - 内存限制: 64 MB
 
 A registration card number of PAT consists of 4 parts:
 
@@ -19,19 +19,19 @@ A registration card number of PAT consists of 4 parts:
 
 Now given a set of registration card numbers and the scores of the card owners, you are supposed to output the various statistics according to the given queries.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line gives two positive integers $$N$$ ($$\le 10^4$$) and $$M$$ ($$\le 100$$), the numbers of cards and the queries, respectively.
+Each input file contains one test case. For each case, the first line gives two positive integers $N$ ($\le 10^4$) and $M$ ($\le 100$), the numbers of cards and the queries, respectively.
 
-Then $$N$$ lines follow, each gives a card number and the owner's score (integer in $$[0, 100]$$), separated by a space.
+Then $N$ lines follow, each gives a card number and the owner's score (integer in $[0, 100]$), separated by a space.
 
-After the info of testees, there are $$M$$ lines, each gives a query in the format `Type Term`, where
+After the info of testees, there are $M$ lines, each gives a query in the format `Type Term`, where
 
 - `Type` being 1 means to output all the testees on a given level, in non-increasing order of their scores. The corresponding `Term` will be the letter which specifies the level;
 - `Type` being 2 means to output the total number of testees together with their total scores in a given site. The corresponding `Term` will then be the site number;
 - `Type` being 3 means to output the total number of testees of every site for a given test date.  The corresponding `Term` will then be the date, given in the same format as in the registration card.
 
-### Output Specification:
+**Output Specification**
 
 For each query, first print in a line `Case #: input`, where `#` is the index of the query case, starting from 1; and `input` is a copy of the corresponding input query.  Then output as requested:
 
@@ -41,7 +41,7 @@ For each query, first print in a line `Case #: input`, where `#` is the index of
 
 If the result of a query is empty, simply print `NA`.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 8 4
 B123180908127 99
@@ -58,7 +58,7 @@ A107180908021 98
 2 999
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 Case 1: 1 A
 A107180908108 100
@@ -73,5 +73,4 @@ Case 3: 3 180908
 Case 4: 2 999
 NA
 ```
-
 

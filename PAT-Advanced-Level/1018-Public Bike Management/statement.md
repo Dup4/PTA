@@ -4,11 +4,11 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CHEN, Yue
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 400 ms
-    内存限制: 64 MB
+    - 作者: CHEN, Yue
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 400 ms
+    - 内存限制: 64 MB
 
 There is a public bike service in Hangzhou City which provides great convenience to the tourists from all over the world.  One may rent a bike at any station and return it to any other stations in the city.
 
@@ -19,23 +19,23 @@ When a problem station is reported, PBMC will always choose the shortest path to
 
 ![](~/213)
 
-The above figure illustrates an example.  The stations are represented by vertices and the roads correspond to the edges.  The number on an edge is the time taken to reach one end station from another.  The number written inside a vertex $$S$$ is the current number of bikes stored at $$S$$.  Given that the maximum capacity of each station is 10.  To solve the problem at $$S_3$$, we have 2 different shortest paths:
+The above figure illustrates an example.  The stations are represented by vertices and the roads correspond to the edges.  The number on an edge is the time taken to reach one end station from another.  The number written inside a vertex $S$ is the current number of bikes stored at $S$.  Given that the maximum capacity of each station is 10.  To solve the problem at $S_3$, we have 2 different shortest paths:
 
-1. PBMC -> $$S_1$$ -> $$S_3$$.  In this case, 4 bikes must be sent from PBMC, because we can collect 1 bike from $$S_1$$ and then take 5 bikes to $$S_3$$, so that both stations will be in perfect conditions.
+1. PBMC -> $S_1$ -> $S_3$.  In this case, 4 bikes must be sent from PBMC, because we can collect 1 bike from $S_1$ and then take 5 bikes to $S_3$, so that both stations will be in perfect conditions.
 
-2. PBMC -> $$S_2$$ -> $$S_3$$.  This path requires the same time as path 1, but only 3 bikes sent from PBMC and hence is the one that will be chosen.
+2. PBMC -> $S_2$ -> $S_3$.  This path requires the same time as path 1, but only 3 bikes sent from PBMC and hence is the one that will be chosen.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case.  For each case, the first line contains 4 numbers: $$C_{max}$$ ($$\le 100$$), always an even number, is the maximum capacity of each station; $$N$$ ($$\le 500$$), the total number of stations; $$S_p$$, the index of the problem station (the stations are numbered from 1 to $$N$$, and PBMC is represented by the vertex 0); and $$M$$, the number of roads.  The second line contains $$N$$ non-negative numbers $$C_i$$ ($$i=1,\cdots ,N$$) where each $$C_i$$ is the current number of bikes at $$S_i$$ respectively.  Then $$M$$ lines follow, each contains 3 numbers: $$S_i$$, $$S_j$$, and $$T_{ij}$$ which describe the time $$T_{ij}$$ taken to move betwen stations $$S_i$$ and $$S_j$$.  All the numbers in a line are separated by a space.
+Each input file contains one test case.  For each case, the first line contains 4 numbers: $C_{max}$ ($\le 100$), always an even number, is the maximum capacity of each station; $N$ ($\le 500$), the total number of stations; $S_p$, the index of the problem station (the stations are numbered from 1 to $N$, and PBMC is represented by the vertex 0); and $M$, the number of roads.  The second line contains $N$ non-negative numbers $C_i$ ($i=1,\cdots ,N$) where each $C_i$ is the current number of bikes at $S_i$ respectively.  Then $M$ lines follow, each contains 3 numbers: $S_i$, $S_j$, and $T_{ij}$ which describe the time $T_{ij}$ taken to move betwen stations $S_i$ and $S_j$.  All the numbers in a line are separated by a space.
 
-### Output Specification:
+**Output Specification**
 
-For each test case, print your results in one line.  First output the number of bikes that PBMC must send.  Then after one space, output the path in the format: $$0->S_1->\cdots ->S_p$$.  Finally after another space, output the number of bikes that we must take back to PBMC after the condition of $$S_p$$ is adjusted to perfect.
+For each test case, print your results in one line.  First output the number of bikes that PBMC must send.  Then after one space, output the path in the format: $0->S_1->\cdots ->S_p$.  Finally after another space, output the number of bikes that we must take back to PBMC after the condition of $S_p$ is adjusted to perfect.
 
 Note that if such a path is not unique, output the one that requires minimum number of bikes that we must take back to PBMC.  The judge's data guarantee that such a path is unique.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 10 3 3 5
 6 7 0
@@ -46,8 +46,7 @@ Note that if such a path is not unique, output the one that requires minimum num
 2 3 1
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 3 0->2->3 0
 ```
-

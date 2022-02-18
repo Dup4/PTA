@@ -4,11 +4,11 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: 陈越
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 400 ms
-    内存限制: 64 MB
+    - 作者: 陈越
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 400 ms
+    - 内存限制: 64 MB
 
 
 ![AI.jpg](~/3e7829fa-ed75-4890-acca-54a00fbac9d3.jpg)
@@ -26,15 +26,15 @@
 - 把原文中所有的问号 `?` 换成惊叹号 `!`；
 - 在一行中输出替换后的句子作为 AI 的回答。
 
-### 输入格式：
+**输入格式**
 
 输入首先在第一行给出不超过 10 的正整数 N，随后 N 行，每行给出一句不超过 1000 个字符的、以回车结尾的用户的对话，对话为非空字符串，仅包括字母、数字、空格、可见的半角标点符号。
 
-### 输出格式：
+**输出格式**
 
 按题面要求输出，每个 AI 的回答前要加上 `AI:` 和一个空格。
 
-### 输入样例：
+**输入样例**
 ```plaintext
 6
 Hello ?
@@ -45,7 +45,7 @@ Could you show me 5
 What Is this prime? I,don 't know
 ```
 
-### 输出样例：
+**输出样例**
 ```plaintext
 Hello ?
 AI: hello!
@@ -60,5 +60,4 @@ AI: I could show you 5
 What Is this prime? I,don 't know
 AI: what Is this prime! you,don't know
 ```
-
 

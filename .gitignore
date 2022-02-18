@@ -2,6 +2,9 @@
 .vscode/
 
 params.json
+mkdocs.yml
 
 /venv
 /node_modules
+/site
+/_docs

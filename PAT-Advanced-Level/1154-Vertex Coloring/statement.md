@@ -4,27 +4,27 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: 陈越
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 900 ms
-    内存限制: 64 MB
+    - 作者: 陈越
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 900 ms
+    - 内存限制: 64 MB
 
-A **proper vertex coloring** is a labeling of the graph's vertices with colors such that no two vertices sharing the same edge have the same color.  A coloring using at most $$k$$ colors is called a (proper) **$$k$$-coloring**.
+A **proper vertex coloring** is a labeling of the graph's vertices with colors such that no two vertices sharing the same edge have the same color.  A coloring using at most $k$ colors is called a (proper) **$k$-coloring**.
 
-Now you are supposed to tell if a given coloring is a proper $$k$$-coloring.
+Now you are supposed to tell if a given coloring is a proper $k$-coloring.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line gives two positive integers $$N$$ and $$M$$ (both no more than $$10^4$$), being the total numbers of vertices and edges, respectively. Then $$M$$ lines follow, each describes an edge by giving the indices (from 0 to $$N-1$$) of the two ends of the edge.
+Each input file contains one test case. For each case, the first line gives two positive integers $N$ and $M$ (both no more than $10^4$), being the total numbers of vertices and edges, respectively. Then $M$ lines follow, each describes an edge by giving the indices (from 0 to $N-1$) of the two ends of the edge.
 
-After the graph, a positive integer $$K$$ ($$\le$$ 100) is given, which is the number of colorings you are supposed to check. Then $$K$$ lines follow, each contains $$N$$ colors which are represented by non-negative integers in the range of **int**.  The $$i$$-th color is the color of the $$i$$-th vertex.
+After the graph, a positive integer $K$ ($\le$ 100) is given, which is the number of colorings you are supposed to check. Then $K$ lines follow, each contains $N$ colors which are represented by non-negative integers in the range of **int**.  The $i$-th color is the color of the $i$-th vertex.
 
-### Output Specification:
+**Output Specification**
 
 For each coloring, print in a line `k-coloring` if it is a proper `k`-coloring for some positive `k`, or `No` if not.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 10 11
 8 7
@@ -45,12 +45,11 @@ For each coloring, print in a line `k-coloring` if it is a proper `k`-coloring f
 1 2 3 4 5 6 7 8 8 9
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 4-coloring
 No
 6-coloring
 No
 ```
-
 

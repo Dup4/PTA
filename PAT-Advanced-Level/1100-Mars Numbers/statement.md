@@ -4,11 +4,11 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CHEN, Yue
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 400 ms
-    内存限制: 64 MB
+    - 作者: CHEN, Yue
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 400 ms
+    - 内存限制: 64 MB
 
 People on Mars count their numbers with base 13:
 
@@ -18,15 +18,15 @@ People on Mars count their numbers with base 13:
 
 For examples, the number 29 on Earth is called "hel mar" on Mars; and "elo nov" on Mars corresponds to 115 on Earth. In order to help communication between people from these two planets, you are supposed to write a program for mutual translation between Earth and Mars number systems.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line contains a positive integer $$N$$ ($$< 100$$). Then $$N$$ lines follow, each contains a number in [0, 169), given either in the form of an Earth number, or that of Mars.
+Each input file contains one test case. For each case, the first line contains a positive integer $N$ ($< 100$). Then $N$ lines follow, each contains a number in [0, 169), given either in the form of an Earth number, or that of Mars.
 
-### Output Specification:
+**Output Specification**
 
 For each number, print in a line the corresponding number in the other language.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 4
 29
@@ -35,12 +35,11 @@ elo nov
 tam
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 hel mar
 may
 115
 13
 ```
-
 

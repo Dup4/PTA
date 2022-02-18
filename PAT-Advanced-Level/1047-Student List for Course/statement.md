@@ -4,23 +4,23 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CHEN, Yue
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 1000 ms
-    内存限制: 64 MB
+    - 作者: CHEN, Yue
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 1000 ms
+    - 内存限制: 64 MB
 
 Zhejiang University has 40,000 students and provides 2,500 courses. Now given the registered course list of each student, you are supposed to output the student name lists of all the courses.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line contains 2 numbers: $$N$$ ($$\le 40,000$$), the total number of students, and $$K$$ ($$\le 2,500$$), the total number of courses. Then $$N$$ lines follow, each contains a student's name (3 capital English letters plus a one-digit number), a positive number $$C$$ ($$\le 20$$) which is the number of courses that this student has registered, and then followed by $$C$$ course numbers. For the sake of simplicity, the courses are numbered from 1 to $$K$$.
+Each input file contains one test case. For each case, the first line contains 2 numbers: $N$ ($\le 40,000$), the total number of students, and $K$ ($\le 2,500$), the total number of courses. Then $N$ lines follow, each contains a student's name (3 capital English letters plus a one-digit number), a positive number $C$ ($\le 20$) which is the number of courses that this student has registered, and then followed by $C$ course numbers. For the sake of simplicity, the courses are numbered from 1 to $K$.
 
-### Output Specification:
+**Output Specification**
 
 For each test case, print the student name lists of all the courses in increasing order of the course numbers. For each course, first print in one line the course number and the number of registered students, separated by a space. Then output the students' names in alphabetical order. Each name occupies a line.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 10 5
 ZOE1 2 4 5
@@ -35,7 +35,7 @@ KAT3 3 5 4 2
 LOR6 4 2 4 1 5
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 1 4
 ANN0
@@ -71,5 +71,4 @@ KAT3
 LOR6
 ZOE1
 ```
-
 

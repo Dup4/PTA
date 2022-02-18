@@ -4,23 +4,23 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: ZHANG, Guochuan
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 200 ms
-    内存限制: 64 MB
+    - 作者: ZHANG, Guochuan
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 200 ms
+    - 内存限制: 64 MB
 
 With highways available, driving a car from Hangzhou to any other city is easy.  But since the tank capacity of a car is limited, we have to find gas stations on the way from time to time.  Different gas station may give different price.  You are asked to carefully design the cheapest route to go.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case.  For each case, the first line contains 4 positive numbers: $$C_{max}$$ ($$\le$$ 100), the maximum capacity of the tank; $$D$$ ($$\le$$30000), the distance between Hangzhou and the destination city; $$D_{avg}$$ ($$\le$$20), the average distance per unit gas that the car can run; and $$N$$ ($$\le$$ 500), the total number of gas stations.  Then $$N$$ lines follow, each contains a pair of non-negative numbers: $$P_i$$, the unit gas price, and $$D_i$$ ($$\le D$$), the distance between this station and Hangzhou, for $$i=1,\cdots ,N$$.  All the numbers in a line are separated by a space.
+Each input file contains one test case.  For each case, the first line contains 4 positive numbers: $C_{max}$ ($\le$ 100), the maximum capacity of the tank; $D$ ($\le$30000), the distance between Hangzhou and the destination city; $D_{avg}$ ($\le$20), the average distance per unit gas that the car can run; and $N$ ($\le$ 500), the total number of gas stations.  Then $N$ lines follow, each contains a pair of non-negative numbers: $P_i$, the unit gas price, and $D_i$ ($\le D$), the distance between this station and Hangzhou, for $i=1,\cdots ,N$.  All the numbers in a line are separated by a space.
 
-### Output Specification:
+**Output Specification**
 
 For each test case, print the cheapest price in a line, accurate up to 2 decimal places.  It is assumed that the tank is empty at the beginning.  If it is impossible to reach the destination, print `The maximum travel distance = X` where `X` is the maximum possible distance the car can run, accurate up to 2 decimal places.
 
-### Sample Input 1:
+**Sample Input 1**
 ```plaintext
 50 1300 12 8
 6.00 1250
@@ -33,20 +33,19 @@ For each test case, print the cheapest price in a line, accurate up to 2 decimal
 6.85 300
 ```
 
-### Sample Output 1:
+**Sample Output 1**
 ```plaintext
 749.17
 ```
 
-### Sample Input 2:
+**Sample Input 2**
 ```
 50 1300 12 2
 7.10 0
 7.00 600
 ```
 
-### Sample Output 2:
+**Sample Output 2**
 ```
 The maximum travel distance = 1200.00
 ```
-

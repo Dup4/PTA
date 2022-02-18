@@ -4,11 +4,11 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: LIU, Rujia
-    单位: 北京尔宜居科技有限责任公司
-    代码长度限制: 16 KB
-    时间限制: 1000 ms
-    内存限制: 64 MB
+    - 作者: LIU, Rujia
+    - 单位: 北京尔宜居科技有限责任公司
+    - 代码长度限制: 16 KB
+    - 时间限制: 1000 ms
+    - 内存限制: 64 MB
 
 Have you ever played the game "Greedy Snake"? In the game, we control the movements of the snake to eat the fruits scattered in the game field, while the snake's body gets longer whenever it eats a fruit. The goal of the game is to make the snake eat as many fruits as possible, before its head has no where to go. It would be a real challenge to let you program this game, right now.
 
@@ -61,37 +61,36 @@ Task 1: minimize the number of fruits left, and count the number of starting pos
 
 Task 2: To make things more interesting, you may replace one fruit cell by an obstacle, to obtain a better result, and count the number of ways to add an obstacle that leads to the better result. In case there is no way to improve the result by adding one obstacle, you should point out this situation.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line contains two integers $$N$$ ($$4 \le N \le 15$$), the size of the game field, and $$K$$ ($$0 \le K \le 2$$), the number of extra obstacles. Then $$K$$ lines follow, each gives the coordinates of an obstacle in the format "$$x_i$$ $$y_i$$" where $$2 \le x_i, y_i \le N-1$$.
+Each input file contains one test case. For each case, the first line contains two integers $N$ ($4 \le N \le 15$), the size of the game field, and $K$ ($0 \le K \le 2$), the number of extra obstacles. Then $K$ lines follow, each gives the coordinates of an obstacle in the format "$x_i$ $y_i$" where $2 \le x_i, y_i \le N-1$.
 
-### Output Specification:
+**Output Specification**
 
-For each case, print the results in two lines. In the first line print the minimal number of fruits left, and the number of different optimal starting positions. Then in the second line, either print $$-1$$ if there is no way to improve the result, or two integers: the better result and the number of optimal ways to add an obstacle.
+For each case, print the results in two lines. In the first line print the minimal number of fruits left, and the number of different optimal starting positions. Then in the second line, either print $-1$ if there is no way to improve the result, or two integers: the better result and the number of optimal ways to add an obstacle.
 
-### Sample Input 1:
+**Sample Input 1**
 ```plaintext
 6 1
 2 5
 ```
 
-### Sample Output 1:
+**Sample Output 1**
 ```plaintext
 0 4
 -1
 ```
 
-### Sample Input 2:
+**Sample Input 2**
 ```plaintext
 6 2
 2 2
 3 3
 ```
 
-### Sample Output 2:
+**Sample Output 2**
 ```plaintext
 2 1
 0 2
 ```
-
 

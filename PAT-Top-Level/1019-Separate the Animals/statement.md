@@ -4,11 +4,11 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: LIU, Rujia
-    单位: 北京尔宜居科技有限责任公司
-    代码长度限制: 16 KB
-    时间限制: 1500 ms
-    内存限制: 64 MB
+    - 作者: LIU, Rujia
+    - 单位: 北京尔宜居科技有限责任公司
+    - 代码长度限制: 16 KB
+    - 时间限制: 1500 ms
+    - 内存限制: 64 MB
 
 There are some animals in a zoo which can be described as a grid with N rows and M columns. Your task is to place some obstacles so that no pairs of animals can reach each other.
 
@@ -56,17 +56,17 @@ Figure 6
 
 Given some animals, you are supposed to count the number of different solutions.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line gives four integers: N, M, K, H (2 $$\le$$ N, M $$\le$$ 6; 1 $$\le$$ K $$\le$$ 12; 0 $$\le$$ H $$\le$$ 2). All the numbers are separated by spaces.
+Each input file contains one test case. For each case, the first line gives four integers: N, M, K, H (2 $\le$ N, M $\le$ 6; 1 $\le$ K $\le$ 12; 0 $\le$ H $\le$ 2). All the numbers are separated by spaces.
 
 Then N lines follow, each contains M characters, which are either `.` or `O`, representing an open cell or an animal, respectively. There will be at least 2 animals.
 
-### Output Specification:
+**Output Specification**
 
 For each case, print a single line containing a single integer: the number of solutions.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 3 5 8 1
 ...O.
@@ -74,9 +74,8 @@ For each case, print a single line containing a single integer: the number of so
 .....
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 8
 ```
-
 

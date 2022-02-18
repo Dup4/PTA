@@ -4,27 +4,27 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CHEN, Yue
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 500 ms
-    内存限制: 128 MB
+    - 作者: CHEN, Yue
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 500 ms
+    - 内存限制: 128 MB
 
-Forbes magazine publishes every year its list of billionaires based on the annual ranking of the world's wealthiest people. Now you are supposed to simulate this job, but concentrate only on the people in a certain range of ages. That is, given the net worths of $$N$$ people, you must find the $$M$$ richest people in a given range of their ages.
+Forbes magazine publishes every year its list of billionaires based on the annual ranking of the world's wealthiest people. Now you are supposed to simulate this job, but concentrate only on the people in a certain range of ages. That is, given the net worths of $N$ people, you must find the $M$ richest people in a given range of their ages.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line contains 2 positive integers: $$N$$ ($$\le 10^5$$) - the total number of people, and $$K$$ ($$\le 10^3$$) - the number of queries. Then $$N$$ lines follow, each contains the name (string of no more than 8 characters without space), age (integer in (0, 200]), and the net worth (integer in [$$-10^6, 10^6$$]) of a person. Finally there are $$K$$ lines of queries, each contains three positive integers: $$M$$ ($$\le  100$$) - the maximum number of outputs, and [`Amin`, `Amax`] which are the range of ages. All the numbers in a line are separated by a space.
+Each input file contains one test case. For each case, the first line contains 2 positive integers: $N$ ($\le 10^5$) - the total number of people, and $K$ ($\le 10^3$) - the number of queries. Then $N$ lines follow, each contains the name (string of no more than 8 characters without space), age (integer in (0, 200]), and the net worth (integer in [$-10^6, 10^6$]) of a person. Finally there are $K$ lines of queries, each contains three positive integers: $M$ ($\le  100$) - the maximum number of outputs, and [`Amin`, `Amax`] which are the range of ages. All the numbers in a line are separated by a space.
 
-### Output Specification:
+**Output Specification**
 
-For each query, first print in a line `Case #X:` where `X` is the query number starting from 1. Then output the $$M$$ richest people with their ages in the range [`Amin`, `Amax`]. Each person's information occupies a line, in the format
+For each query, first print in a line `Case #X:` where `X` is the query number starting from 1. Then output the $M$ richest people with their ages in the range [`Amin`, `Amax`]. Each person's information occupies a line, in the format
 ```
 Name Age Net_Worth
 ```
 The outputs must be in non-increasing order of the net worths. In case there are equal worths, it must be in non-decreasing order of the ages. If both worths and ages are the same, then the output must be in non-decreasing alphabetical order of the names. It is guaranteed that there is no two persons share all the same of the three pieces of information. In case no one is found, output `None`.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 12 4
 Zoe_Bill 35 2333
@@ -45,7 +45,7 @@ Nobody 5 0
 1 45 50
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 Case #1:
 Alice 18 88888
@@ -64,5 +64,4 @@ Cindy 76 76000
 Case #4:
 None
 ```
-
 

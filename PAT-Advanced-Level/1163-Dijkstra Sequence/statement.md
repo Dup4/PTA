@@ -4,11 +4,11 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: 陈越
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 2000 ms
-    内存限制: 64 MB
+    - 作者: 陈越
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 2000 ms
+    - 内存限制: 64 MB
 
 Dijkstra's algorithm is one of the very famous greedy algorithms.
 It is used for solving the single source shortest path problem which gives the shortest paths from one particular source vertex to all the other vertices of the given graph.  It was conceived by computer scientist Edsger W. Dijkstra in 1956 and published three years later.
@@ -17,21 +17,21 @@ In this algorithm, a set contains vertices included in shortest path tree is mai
 
 On the other hand, for a given graph, there could be more than one Dijkstra sequence.  For example, both { 5, 1, 3, 4, 2 } and { 5, 3, 1, 2, 4 } are Dijkstra sequences for the graph, where 5 is the source.  Your job is to check whether a given sequence is Dijkstra sequence or not.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line contains two positive integers $$N_v$$ ($$\le 10^3$$) and $$N_e$$ ($$\le 10^5$$), which are the total numbers of vertices and edges, respectively.  Hence the vertices are numbered from 1 to $$N_v$$.
+Each input file contains one test case. For each case, the first line contains two positive integers $N_v$ ($\le 10^3$) and $N_e$ ($\le 10^5$), which are the total numbers of vertices and edges, respectively.  Hence the vertices are numbered from 1 to $N_v$.
 
-Then $$N_e$$ lines follow, each describes an edge by giving the indices of the vertices at the two ends, followed by a positive integer weight ($$\le 100$$) of the edge.  It is guaranteed that the given graph is connected.
+Then $N_e$ lines follow, each describes an edge by giving the indices of the vertices at the two ends, followed by a positive integer weight ($\le 100$) of the edge.  It is guaranteed that the given graph is connected.
 
-Finally the number of queries, $$K$$, is given as a positive integer no larger than $$100$$, followed by $$K$$ lines of sequences, each contains a permutationof the $$N_v$$ vertices.  It is assumed that the first vertex is the source for each sequence.
+Finally the number of queries, $K$, is given as a positive integer no larger than $100$, followed by $K$ lines of sequences, each contains a permutationof the $N_v$ vertices.  It is assumed that the first vertex is the source for each sequence.
 
 All the inputs in a line are separated by a space.
 
-### Output Specification:
+**Output Specification**
 
-For each of the $$K$$ sequences, print in a line `Yes` if it is a Dijkstra sequence, or `No` if not.
+For each of the $K$ sequences, print in a line `Yes` if it is a Dijkstra sequence, or `No` if not.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 5 7
 1 2 2
@@ -49,7 +49,7 @@ For each of the $$K$$ sequences, print in a line `Yes` if it is a Dijkstra seque
 
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 Yes
 Yes
@@ -57,5 +57,4 @@ Yes
 No
 
 ```
-
 

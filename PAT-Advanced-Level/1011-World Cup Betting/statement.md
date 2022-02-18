@@ -4,11 +4,11 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CHEN, Yue
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 400 ms
-    内存限制: 64 MB
+    - 作者: CHEN, Yue
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 400 ms
+    - 内存限制: 64 MB
 
 With the 2010 FIFA World Cup running, football fans the world over were becoming increasingly excited as the best players from the best teams doing battles for the World Cup trophy in South Africa. Similarly, football betting fans were putting their money where their mouths were, by laying all manner of World Cup bets.
 
@@ -22,26 +22,25 @@ For example, 3 games' odds are given as the following:
 4.1  1.2  1.1
 ```
 
-To obtain the maximum profit, one must buy `W` for the 3rd game, `T` for the 2nd game, and `T` for the 1st game. If each bet takes 2 yuans, then the maximum profit would be $$(4.1\times 3.1\times 2.5\times 65\%-1)\times 2 = 39.31$$ yuans (accurate up to 2 decimal places).
+To obtain the maximum profit, one must buy `W` for the 3rd game, `T` for the 2nd game, and `T` for the 1st game. If each bet takes 2 yuans, then the maximum profit would be $(4.1\times 3.1\times 2.5\times 65\%-1)\times 2 = 39.31$ yuans (accurate up to 2 decimal places).
 
-### Input Specification:
+**Input Specification**
 
 Each input file contains one test case. Each case contains the betting information of 3 games. Each game occupies a line with three distinct odds corresponding to `W`, `T` and `L`.
 
-### Output Specification:
+**Output Specification**
 
 For each test case, print in one line the best bet of each game, and the maximum profit accurate up to 2 decimal places. The characters and the number must be separated by one space.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 1.1 2.5 1.7
 1.2 3.1 1.6
 4.1 1.2 1.1
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 T T W 39.31
 ```
-
 

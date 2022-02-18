@@ -4,25 +4,25 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CHEN, Yue
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 400 ms
-    内存限制: 64 MB
+    - 作者: CHEN, Yue
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 400 ms
+    - 内存限制: 64 MB
 
 Given a map of airline routes, you are supposed to check if a round trip can be planned between any pair of cities.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line gives two positive integers $$N$$ ($$2\le N \le 10^4$$) and $$M$$ ($$\le 6N$$), which are the total number of cities (hence the cities are numbered from 1 to $$N$$) and the number of airline routes, respectively. Then $$M$$ lines follow, each gives the information of a route in the format of the source city index first, and then the destination city index, separated by a space. It is guaranteed that the source is never the same as the destination.
+Each input file contains one test case. For each case, the first line gives two positive integers $N$ ($2\le N \le 10^4$) and $M$ ($\le 6N$), which are the total number of cities (hence the cities are numbered from 1 to $N$) and the number of airline routes, respectively. Then $M$ lines follow, each gives the information of a route in the format of the source city index first, and then the destination city index, separated by a space. It is guaranteed that the source is never the same as the destination.
 
-After the map information, another positive integer $$K$$ is given, which is the number of queries. Then $$K$$ lines of queries follow, each contains a pair of distinct cities' indices.
+After the map information, another positive integer $K$ is given, which is the number of queries. Then $K$ lines of queries follow, each contains a pair of distinct cities' indices.
 
-### Output Specification:
+**Output Specification**
 
 For each query, output in a line `Yes` if a round trip is possible, or `No` if not.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 12 19
 3 4
@@ -67,7 +67,7 @@ For each query, output in a line `Yes` if a round trip is possible, or `No` if n
 6 8
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 Yes
 Yes
@@ -90,5 +90,4 @@ No
 No
 No
 ```
-
 

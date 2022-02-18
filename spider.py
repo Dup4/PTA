@@ -3,9 +3,9 @@
 import json
 import logging
 import os
-import textwrap
 from typing import Any, List
 import requests
+import re
 
 
 def json_input(path):
@@ -120,8 +120,12 @@ def download_problem_set(problem_set_id: str, dst: str) -> None:
         current_dst = os.path.join(dst, "{}-{}".format(label, title))
         ensure_dir(current_dst)
 
-        statement = problem['content'].replace(
-            "```in", "```plaintext").replace("```out", "```plaintext")
+        statement = problem['content']
+        statement = statement.replace("```in", "```plaintext")
+        statement = statement.replace("```out", "```plaintext")
+        statement = statement.replace("$$", "$")
+        statement = re.sub(r"### (.*)：", "### \g<1>:", statement)
+        statement = re.sub(r"### (.*):", "**\g<1>**", statement)
 
         statement = '''
 # {} {}
@@ -129,15 +133,14 @@ def download_problem_set(problem_set_id: str, dst: str) -> None:
 ## Statement
 
 !!! info "Metadata"
-    作者: {}
-    单位: {}
-    代码长度限制: {} KB
-    时间限制: {} ms
-    内存限制: {} MB
+    - 作者: {}
+    - 单位: {}
+    - 代码长度限制: {} KB
+    - 时间限制: {} ms
+    - 内存限制: {} MB
 
 {}
-
-                    '''.format(label, title, author, author_organization_name, code_size_limit, time_limit, memory_limit // 1024, statement)
+'''.format(label, title, author, author_organization_name, code_size_limit, time_limit, memory_limit // 1024, statement)
 
         statement_dst = os.path.join(current_dst, "statement.md")
         with open(statement_dst, "w") as f:

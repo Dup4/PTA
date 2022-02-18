@@ -4,34 +4,34 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: 曹鹏
-    单位: Google
-    代码长度限制: 16 KB
-    时间限制: 1000 ms
-    内存限制: 64 MB
+    - 作者: 曹鹏
+    - 单位: Google
+    - 代码长度限制: 16 KB
+    - 时间限制: 1000 ms
+    - 内存限制: 64 MB
 
-Given an integer $$m$$, we consider a sequence (with at least 2 elements) as **beautiful** if it contains 2 neighbors with difference no larger than $$m$$. Given an integer sequence with $$n$$ elements, your job is to calculate the number of beautiful subsequences in it. 
+Given an integer $m$, we consider a sequence (with at least 2 elements) as **beautiful** if it contains 2 neighbors with difference no larger than $m$. Given an integer sequence with $n$ elements, your job is to calculate the number of beautiful subsequences in it. 
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case.  For each case, the first line contains 2 positive integers $$n$$ and $$m$$ ($$2 \le n \le 10^5$$, $$1 \le m \le 10^3$$). Then $$n$$ positive integers follow in the next line, each no larger than $$10^5$$, indicating the sequence.  All the numbers in a line are separated by a space.
+Each input file contains one test case.  For each case, the first line contains 2 positive integers $n$ and $m$ ($2 \le n \le 10^5$, $1 \le m \le 10^3$). Then $n$ positive integers follow in the next line, each no larger than $10^5$, indicating the sequence.  All the numbers in a line are separated by a space.
 
-### Output Specification:
+**Output Specification**
 
-Output the number of beautiful subsequences of the original sequence. Since the answer might be too large, output the result modulo 1000000007 ($$10^9 + 7$$).
+Output the number of beautiful subsequences of the original sequence. Since the answer might be too large, output the result modulo 1000000007 ($10^9 + 7$).
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 4 2
 5 3 8 6
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 8
 ```
 
-### Hint:
+**Hint**
 
 The beautiful subsequences of the sample input are:
 
@@ -45,5 +45,4 @@ The beautiful subsequences of the sample input are:
 (7) Indices {2, 3, 4}, values {3, 8, 6}
 (8) Indices {1, 2, 3, 4}, values {5, 3, 8, 6}
 ```
-
 

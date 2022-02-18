@@ -4,11 +4,11 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CHEN, Yue
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 200 ms
-    内存限制: 64 MB
+    - 作者: CHEN, Yue
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 200 ms
+    - 内存限制: 64 MB
 
 To evaluate the performance of our first year CS majored students, we consider their grades of three courses only: `C` - C Programming Language, `M` - Mathematics (Calculus or Linear Algrbra), and `E` - English. At the mean time, we encourage students by emphasizing on their best ranks -- that is, among the four ranks with respect to the three courses and the average grade, we print the best rank for each student.
 
@@ -23,19 +23,19 @@ StudentID  C  M  E  A
 
 Then the best ranks for all the students are No.1 since the 1st one has done the best in C Programming Language, while the 2nd one in Mathematics, the 3rd one in English, and the last one in average.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. Each case starts with a line containing 2 numbers $$N$$ and $$M$$ ($$\le 2000$$), which are the total number of students, and the number of students who would check their ranks, respectively. Then $$N$$ lines follow, each contains a student ID which is a string of 6 digits, followed by the three integer grades (in the range of [0, 100]) of that student in the order of `C`, `M` and `E`. Then there are $$M$$ lines, each containing a student ID.
+Each input file contains one test case. Each case starts with a line containing 2 numbers $N$ and $M$ ($\le 2000$), which are the total number of students, and the number of students who would check their ranks, respectively. Then $N$ lines follow, each contains a student ID which is a string of 6 digits, followed by the three integer grades (in the range of [0, 100]) of that student in the order of `C`, `M` and `E`. Then there are $M$ lines, each containing a student ID.
 
-### Output Specification:
+**Output Specification**
 
-For each of the $$M$$ students, print in one line the best rank for him/her, and the symbol of the corresponding rank, separated by a space.
+For each of the $M$ students, print in one line the best rank for him/her, and the symbol of the corresponding rank, separated by a space.
 
-The priorities of the ranking methods are ordered as `A` $$>$$ `C` $$>$$ `M` $$>$$ `E`. Hence if there are two or more ways for a student to obtain the same best rank, output the one with the highest priority.
+The priorities of the ranking methods are ordered as `A` $>$ `C` $>$ `M` $>$ `E`. Hence if there are two or more ways for a student to obtain the same best rank, output the one with the highest priority.
 
 If a student is not on the grading list, simply output `N/A`.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 5 6
 310101 98 85 88
@@ -51,7 +51,7 @@ If a student is not on the grading list, simply output `N/A`.
 999999
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 1 C
 1 M
@@ -60,5 +60,4 @@ If a student is not on the grading list, simply output `N/A`.
 3 A
 N/A
 ```
-
 

@@ -4,17 +4,17 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CHEN, Yue
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 1200 ms
-    内存限制: 64 MB
+    - 作者: CHEN, Yue
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 1200 ms
+    - 内存限制: 64 MB
 
 A Digital Library contains millions of books, stored according to their titles, authors, key words of their abstracts, publishers, and published years. Each book is assigned an unique 7-digit number as its ID. Given any query from a reader, you are supposed to output the resulting books, sorted in increasing order of their ID's.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line contains a positive integer $$N$$ ($$\le 10^4$$) which is the total number of books. Then $$N$$ blocks follow, each contains the information of a book in 6 lines:
+Each input file contains one test case. For each case, the first line contains a positive integer $N$ ($\le 10^4$) which is the total number of books. Then $N$ blocks follow, each contains the information of a book in 6 lines:
 
 - Line #1: the 7-digit ID number;
 - Line #2: the book title -- a string of no more than 80 characters;
@@ -25,7 +25,7 @@ Each input file contains one test case. For each case, the first line contains a
 
 It is assumed that each book belongs to one author only, and contains no more than 5 key words; there are no more than 1000 distinct key words in total; and there are no more than 1000 distinct publishers.
 
-After the book information, there is a line containing a positive integer $$M$$ ($$\le 1000$$) which is the number of user's search queries. Then $$M$$ lines follow, each in one of the formats shown below:
+After the book information, there is a line containing a positive integer $M$ ($\le 1000$) which is the number of user's search queries. Then $M$ lines follow, each in one of the formats shown below:
 
 - 1: a book title
 - 2: name of an author
@@ -33,11 +33,11 @@ After the book information, there is a line containing a positive integer $$M$$ 
 - 4: name of a publisher
 - 5: a 4-digit number representing the year
 
-### Output Specification:
+**Output Specification**
 
 For each query, first print the original query in a line, then output the resulting book ID's in increasing order, each occupying a line. If no book is found, print `Not Found` instead.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 3
 1111111
@@ -67,7 +67,7 @@ ZUCS Print2
 3: blablabla
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 1: The Testing Book
 1111111
@@ -87,5 +87,4 @@ ZUCS Print2
 3: blablabla
 Not Found
 ```
-
 

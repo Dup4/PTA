@@ -4,29 +4,29 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CHEN, Yue
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 300 ms
-    内存限制: 64 MB
+    - 作者: CHEN, Yue
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 300 ms
+    - 内存限制: 64 MB
 
-Stack is one of the most fundamental data structures, which is based on the principle of Last In First Out (LIFO). The basic operations include Push (inserting an element onto the top position) and Pop (deleting the top element). Now you are supposed to implement a stack with an extra operation: PeekMedian -- return the median value of all the elements in the stack. With $$N$$ elements, the median value is defined to be the $$(N/2)$$-th smallest element if $$N$$ is even, or $$((N+1)/2)$$-th if $$N$$ is odd.
+Stack is one of the most fundamental data structures, which is based on the principle of Last In First Out (LIFO). The basic operations include Push (inserting an element onto the top position) and Pop (deleting the top element). Now you are supposed to implement a stack with an extra operation: PeekMedian -- return the median value of all the elements in the stack. With $N$ elements, the median value is defined to be the $(N/2)$-th smallest element if $N$ is even, or $((N+1)/2)$-th if $N$ is odd.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line contains a positive integer $$N$$ ($$\le 10^5$$). Then $$N$$ lines follow, each contains a command in one of the following 3 formats:
+Each input file contains one test case. For each case, the first line contains a positive integer $N$ ($\le 10^5$). Then $N$ lines follow, each contains a command in one of the following 3 formats:
 ```
 Push key
 Pop
 PeekMedian
 ```
-where `key` is a positive integer no more than $$10^5$$.
+where `key` is a positive integer no more than $10^5$.
 
-### Output Specification:
+**Output Specification**
 
 For each `Push` command, insert `key` into the stack and output nothing. For each `Pop` or `PeekMedian` command, print in a line the corresponding returned value. If the command is invalid, print `Invalid` instead.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 17
 Pop
@@ -48,7 +48,7 @@ Pop
 Pop
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 Invalid
 Invalid
@@ -63,5 +63,4 @@ Invalid
 3
 Invalid
 ```
-
 

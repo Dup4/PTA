@@ -4,34 +4,34 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CAO, Peng
-    单位: Google
-    代码长度限制: 16 KB
-    时间限制: 200 ms
-    内存限制: 64 MB
+    - 作者: CAO, Peng
+    - 单位: Google
+    - 代码长度限制: 16 KB
+    - 时间限制: 200 ms
+    - 内存限制: 64 MB
 
 Here is a simple intersting letter-moving game. The game starts with 2 strings S and T consist of lower case English letters. S and T contain the same letters but the orders might be different. In other words S can be obtained by shuffling letters in String T. At each step, you can move one arbitrary letter in S either to the beginning or to the end of it. How many steps at least to change S into T?
 
-### Input Specification:
+**Input Specification**
 
 Each input file contains one test case. For each case, the first line contains the string S, and the second line contains the string T. They consist of only the lower case English letters and S can be obtained by shuffling T's letters. The length of S is no larger than 1000.
 
-### Output Specification:
+**Output Specification**
 
 For each case, print in a line the least number of steps to change S into T in the game.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 iononmrogdg
 goodmorning
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 8
 ```
 
-### Sample Solution:
+**Sample Solution**
 ```
 (0) starts from iononmrogdg
 (1) Move the last g to the beginning: giononmrogd
@@ -43,5 +43,4 @@ goodmorning
 (7) Move the first n to the end: googdmornin
 (8) Move the second g to the end: goodmorning
 ```
-
 

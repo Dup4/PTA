@@ -4,11 +4,11 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CHEN, Yue
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 400 ms
-    内存限制: 64 MB
+    - 作者: CHEN, Yue
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 400 ms
+    - 内存限制: 64 MB
 
 There is a kind of balanced binary search tree named **red-black tree** in the data structure. It has the following 5 properties:
 
@@ -26,15 +26,15 @@ For example, the tree in Figure 1 is a red-black tree, while the ones in Figure 
 
 For each given binary search tree, you are supposed to tell if it is a legal red-black tree.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains several test cases.  The first line gives a positive integer K ($$\le$$30) which is the total number of cases.  For each case, the first line gives a positive integer N ($$\le$$30), the total number of nodes in the binary tree.  The second line gives the preorder traversal sequence of the tree.  While all the keys in a tree are positive integers, we use negative signs to represent red nodes.  All the numbers in a line are separated by a space.  The sample input cases correspond to the trees shown in Figure 1, 2 and 3.
+Each input file contains several test cases.  The first line gives a positive integer K ($\le$30) which is the total number of cases.  For each case, the first line gives a positive integer N ($\le$30), the total number of nodes in the binary tree.  The second line gives the preorder traversal sequence of the tree.  While all the keys in a tree are positive integers, we use negative signs to represent red nodes.  All the numbers in a line are separated by a space.  The sample input cases correspond to the trees shown in Figure 1, 2 and 3.
 
-### Output Specification:
+**Output Specification**
 
 For each test case, print in a line "Yes" if the given tree is a red-black tree, or "No" if not.
 
-### Sample Input:
+**Sample Input**
 ```plaintext
 3
 9
@@ -45,11 +45,10 @@ For each test case, print in a line "Yes" if the given tree is a red-black tree,
 10 -7 5 -6 8 15 -11 17
 ```
 
-### Sample Output:
+**Sample Output**
 ```plaintext
 Yes
 No
 No
 ```
-
 

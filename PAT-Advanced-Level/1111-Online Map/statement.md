@@ -4,25 +4,25 @@
 ## Statement
 
 !!! info "Metadata"
-    作者: CHEN, Yue
-    单位: 浙江大学
-    代码长度限制: 16 KB
-    时间限制: 400 ms
-    内存限制: 64 MB
+    - 作者: CHEN, Yue
+    - 单位: 浙江大学
+    - 代码长度限制: 16 KB
+    - 时间限制: 400 ms
+    - 内存限制: 64 MB
 
 Input our current position and a destination, an online map can recommend several paths. Now your job is to recommend two paths to your user: one is the shortest, and the other is the fastest. It is guaranteed that a path exists for any request.
 
-### Input Specification:
+**Input Specification**
 
-Each input file contains one test case. For each case, the first line gives two positive integers $$N$$ ($$2 \le N \le 500$$), and $$M$$, being the total number of streets intersections on a map, and the number of streets, respectively. Then $$M$$ lines follow, each describes a street in the format:
+Each input file contains one test case. For each case, the first line gives two positive integers $N$ ($2 \le N \le 500$), and $M$, being the total number of streets intersections on a map, and the number of streets, respectively. Then $M$ lines follow, each describes a street in the format:
 ```
 V1 V2 one-way length time
 ```
-where `V1` and `V2` are the indices (from 0 to $$N-1$$) of the two ends of the street; `one-way` is 1 if the street is one-way from `V1` to `V2`, or 0 if not; `length` is the length of the street; and `time` is the time taken to pass the street.
+where `V1` and `V2` are the indices (from 0 to $N-1$) of the two ends of the street; `one-way` is 1 if the street is one-way from `V1` to `V2`, or 0 if not; `length` is the length of the street; and `time` is the time taken to pass the street.
 
 Finally a pair of source and destination is given.
 
-### Output Specification:
+**Output Specification**
 
 For each case, first print the shortest path from the source to the destination with distance `D` in the format:
 ```
@@ -39,7 +39,7 @@ In case the shortest and the fastest paths are identical, print them in one line
 Distance = D; Time = T: source -> u1 -> ... -> destination
 ```
 
-### Sample Input 1:
+**Sample Input 1**
 ```plaintext
 10 15
 0 1 0 1 1
@@ -60,13 +60,13 @@ Distance = D; Time = T: source -> u1 -> ... -> destination
 3 5
 ```
 
-### Sample Output 1:
+**Sample Output 1**
 ```plaintext
 Distance = 6: 3 -> 4 -> 8 -> 5
 Time = 3: 3 -> 1 -> 5
 ```
 
-### Sample Input 2:
+**Sample Input 2**
 ```plaintext
 7 9
 0 4 1 1 1
@@ -81,9 +81,8 @@ Time = 3: 3 -> 1 -> 5
 3 5
 ```
 
-### Sample Output 2:
+**Sample Output 2**
 ```plaintext
 Distance = 3; Time = 4: 3 -> 2 -> 5
 ```
-
 
