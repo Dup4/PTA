@@ -1,19 +1,19 @@
-#include <iostream>
-#include <cstdio>
+#include <ctype.h>
 #include <algorithm>
 #include <cmath>
-#include <deque>
-#include <vector>
-#include <queue>
-#include <string>
-#include <cstring>
-#include <map>
-#include <stack>
-#include <set>
+#include <cstdio>
 #include <cstdlib>
-#include <ctype.h>
+#include <cstring>
+#include <deque>
+#include <iostream>
+#include <map>
 #include <numeric>
+#include <queue>
+#include <set>
 #include <sstream>
+#include <stack>
+#include <string>
+#include <vector>
 using namespace std;
 
 typedef long long LL;
@@ -25,29 +25,27 @@ const int MINN = 0xc0c0c0c0;
 const int maxn = 1e5 + 5;
 const int MOD = 1e9 + 7;
 
-int main()
-{
-	map <char, string> m;
-	m.clear();
-	m['0'] = "ling" ;
-	m['1'] = "yi";
-	m['2'] = "er";
-	m['3'] = "san";
-	m['4'] = "si";
-	m['5'] = "wu";
-	m['6'] = "liu";
-	m['7'] = "qi";
-	m['8'] = "ba";
-	m['9'] = "jiu";
-	m['-'] = "fu";
-	string s;
-	cin >> s;
-	int len = s.size();
-	for (int i = 0; i < len; i++)
-	{
-		if (i)
-			cout << " ";
-		cout << m[s[i]];
-	}
-	cout << endl;
+int main() {
+    map<char, string> m;
+    m.clear();
+    m['0'] = "ling";
+    m['1'] = "yi";
+    m['2'] = "er";
+    m['3'] = "san";
+    m['4'] = "si";
+    m['5'] = "wu";
+    m['6'] = "liu";
+    m['7'] = "qi";
+    m['8'] = "ba";
+    m['9'] = "jiu";
+    m['-'] = "fu";
+    string s;
+    cin >> s;
+    int len = s.size();
+    for (int i = 0; i < len; i++) {
+        if (i)
+            cout << " ";
+        cout << m[s[i]];
+    }
+    cout << endl;
 }
