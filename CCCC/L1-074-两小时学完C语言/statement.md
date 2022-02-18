@@ -11,7 +11,7 @@
     - 内存限制: 64 MB
 
 
-![Q.JPG](~/b388314c-c7d3-48d8-befa-0fc45cf853a9.JPG)
+![Q.JPG](./statement-assets/b388314c-c7d3-48d8-befa-0fc45cf853a9.JPG)
 
 
 知乎上有个宝宝问：“两个小时内如何学完 C 语言？”当然，问的是“学完”并不是“学会”。

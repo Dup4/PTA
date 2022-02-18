@@ -12,7 +12,7 @@
 
 When your interviewer asks you to write "Hello World" using C, can you do as the following figure shows?
 
-![HWC.jpg](~/ba3b8678-061d-4fc6-a87e-ce08e1434410.jpg)
+![HWC.jpg](./statement-assets/ba3b8678-061d-4fc6-a87e-ce08e1434410.jpg)
 
 **Input Specification**
 

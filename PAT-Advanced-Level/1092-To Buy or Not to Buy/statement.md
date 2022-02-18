@@ -15,7 +15,7 @@ Eva would like to make a string of beads with her favorite colors so she went to
 For the sake of simplicity, let's use the characters in the ranges [0-9], [a-z], and [A-Z] to represent the colors. For example, the 3rd string in Figure 1 is the one that Eva would like to make. Then the 1st string is okay since it contains all the necessary beads with 8 extra ones; yet the 2nd one is not since there is no black bead and one less red bead.
 
 
-![figbuy.jpg](~/b7e2ffa6-8819-436d-ad79-a41263abe914.jpg)
+![figbuy.jpg](./statement-assets/b7e2ffa6-8819-436d-ad79-a41263abe914.jpg)
 
 
 Figure 1

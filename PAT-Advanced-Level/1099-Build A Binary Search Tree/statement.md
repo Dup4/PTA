@@ -19,7 +19,7 @@ A Binary Search Tree (BST) is recursively defined as a binary tree which has the
 Given the structure of a binary tree and a sequence of distinct integer keys, there is only one way to fill these keys into the tree so that the resulting tree satisfies the definition of a BST. You are supposed to output the level order traversal sequence of that tree. The sample is illustrated by Figure 1 and 2.
 
 
-![figBST.jpg](~/24c2521f-aaed-4ef4-bac8-3ff562d80a1b.jpg)
+![figBST.jpg](./statement-assets/24c2521f-aaed-4ef4-bac8-3ff562d80a1b.jpg)
 
 
 **Input Specification**

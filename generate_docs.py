@@ -50,6 +50,7 @@ def generate_docs(src: str, dst: str, relative_path: str) -> List:
     TUTORIAL_FILE_NAME = "tutorial.md"
     SOLUTION_FILE_NAME = "solution"
     INDEX_FILE_NAME = "index.md"
+    TEST_DATA_DIR_NAME = "test-data"
 
     nav_content = []
     shutil.copytree(src, dst)
@@ -62,6 +63,10 @@ def generate_docs(src: str, dst: str, relative_path: str) -> List:
 
         current_src = os.path.join(src, dir)
         current_dst = os.path.join(dst, dir)
+
+        test_data_dst_path = os.path.join(current_dst, TEST_DATA_DIR_NAME)
+        if os.path.exists(test_data_dst_path):
+            shutil.rmtree(test_data_dst_path)
 
         statement_src_path = os.path.join(current_src, STATEMENT_FILE_NAME)
         statement_dst_path = os.path.join(current_dst, STATEMENT_FILE_NAME)

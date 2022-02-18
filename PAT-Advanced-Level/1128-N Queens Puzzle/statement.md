@@ -14,7 +14,7 @@ The "eight queens puzzle" is the problem of placing eight chess queens on an $8\
 
 Here you are NOT asked to solve the puzzles. Instead, you are supposed to judge whether or not a given configuration of the chessboard is a solution. To simplify the representation of a chessboard, let us assume that no two queens will be placed in the same column. Then a configuration can be represented by a simple integer sequence $(Q_1, Q_2, \cdots , Q_N)$, where $Q_i$ is the row number of the queen in the $i$-th column. For example, Figure 1 can be represented by (4, 6, 8, 2, 7, 1, 3, 5) and it is indeed a solution to the 8 queens puzzle; while Figure 2 can be represented by (4, 6, 7, 2, 8, 1, 9, 5, 3) and is NOT a 9 queens' solution.
 
-|![8q.jpg](~/7d0443cf-5c19-4494-98a6-0f0f54894eaa.jpg)| |![9q.jpg](~/d187e37a-4eb8-4215-8e2c-040a73c5c8d8.jpg)|
+|![8q.jpg](~/7d0443cf-5c19-4494-98a6-0f0f54894eaa.jpg)| |![9q.jpg](./statement-assets/d187e37a-4eb8-4215-8e2c-040a73c5c8d8.jpg)|
 |:--:|-|:--:|
 |Figure 1| |Figure 2|
 

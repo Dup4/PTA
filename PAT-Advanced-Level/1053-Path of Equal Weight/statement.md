@@ -15,7 +15,7 @@ Given a non-empty tree with root $R$, and with weight $W_i$ assigned to each tre
 Now given any weighted tree, you are supposed to find all the paths with their weights equal to a given number.  For example, let's consider the tree showed in the following figure: for each node, the upper number is the node ID which is a two-digit number, and the lower number is the weight of that node.  Suppose that the given number is 24, then there exists 4 different paths which have the same given weight: {10 5 2 7}, {10 4 10}, {10 3 3 6 2} and {10 3 3 6 2}, which correspond to the red edges in the figure.
 
 
-![](~/212)
+![](./statement-assets/212)
 
 **Input Specification**
 

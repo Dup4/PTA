@@ -13,7 +13,7 @@
 Have you ever played the game "Greedy Snake"? In the game, we control the movements of the snake to eat the fruits scattered in the game field, while the snake's body gets longer whenever it eats a fruit. The goal of the game is to make the snake eat as many fruits as possible, before its head has no where to go. It would be a real challenge to let you program this game, right now.
 
 
-![greedysnake.jpg](~/4cca423d-2fb5-4071-9a0a-e675297f4114.jpg)
+![greedysnake.jpg](./statement-assets/4cca423d-2fb5-4071-9a0a-e675297f4114.jpg)
 
 
 But hey! Relax! This time you are only asked to program a simplified version of the game. In this simple version, the fruits are all over the place except at some extra obstacle cells. The snake's body will extend all the way along the path while it eats the fruits. You may take any fruit cell as the starting position of the snake. Then you have four directions to choose from: UP, DOWN, LEFT or RIGHT. Once you pick up a direction for the snake, it must keep going until it hits an obstacle or its own body. This procedure repeats until the head of the snake has no where to go -- that is, every adjacent cell of its head is either an obstacle or its own body. Your task is to minimize the number of fruits left.

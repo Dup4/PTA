@@ -45,6 +45,6 @@
 输出的数值等于图中红色或紫色框线的三角形的面积。
 
 
-![altar.JPG](~/4939a7cd-cb83-40f1-a51e-82e894dabb8d.JPG)
+![altar.JPG](./statement-assets/4939a7cd-cb83-40f1-a51e-82e894dabb8d.JPG)
 
 **鸣谢浙江师范大学伍泰炜补充测试数据！**

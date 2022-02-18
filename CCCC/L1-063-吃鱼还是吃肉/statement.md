@@ -11,8 +11,8 @@
     - 内存限制: 64 MB
 
 
-![fish.JPG](~/92db6321-9f28-48e7-ac24-76a378f7d1a5.JPG)
-  ![肉.JPG](~/fbb97e8a-67f1-4d28-a925-70bd1307fd80.JPG)
+![fish.JPG](./statement-assets/92db6321-9f28-48e7-ac24-76a378f7d1a5.JPG)
+  ![肉.JPG](./statement-assets/fbb97e8a-67f1-4d28-a925-70bd1307fd80.JPG)
 
 
 国家给出了 8 岁男宝宝的标准身高为 130 厘米、标准体重为 27 公斤；8 岁女宝宝的标准身高为 129 厘米、标准体重为 25 公斤。

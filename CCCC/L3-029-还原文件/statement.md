@@ -12,11 +12,11 @@
 
 一份重要文件被撕成两半，其中一半还被送进了碎纸机。我们将碎纸机里找到的纸条进行编号，如图 1 所示。然后根据断口的折线形状跟没有切碎的半张纸进行匹配，最后还原成图 2 的样子。要求你输出还原后纸条的正确拼接顺序。
 
-![file1.JPG](~/ea36b896-47dd-432b-b6ca-1846551690d7.JPG)
+![file1.JPG](./statement-assets/ea36b896-47dd-432b-b6ca-1846551690d7.JPG)
 
 图1 纸条编号
 
-![file2.JPG](~/bf24077c-3593-46bf-b49a-6ba1d4bf5fad.JPG)
+![file2.JPG](./statement-assets/bf24077c-3593-46bf-b49a-6ba1d4bf5fad.JPG)
 
 图2 还原结果
 

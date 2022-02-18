@@ -5,8 +5,7 @@ constexpr int N = 1e2 + 10;
 int n, a[N], b[N];
 
 void dfs(int u) {
-    if (u > n)
-        return;
+    if (u > n) return;
     dfs(u << 1);
     dfs(u * 2 + 1);
     b[u] = ++*b;

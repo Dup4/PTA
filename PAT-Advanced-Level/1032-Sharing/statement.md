@@ -12,7 +12,7 @@
 
 To store English words, one method is to use linked lists and store a word letter by letter. To save some space, we may let the words share the same sublist if they share the same suffix. For example, `loading` and `being` are stored as showed in Figure 1.
 
-![fig.jpg](~/ef0a1fdf-3d9f-46dc-9a27-21f989270fd4.jpg)
+![fig.jpg](./statement-assets/ef0a1fdf-3d9f-46dc-9a27-21f989270fd4.jpg)
 
 
 Figure 1

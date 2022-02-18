@@ -20,7 +20,7 @@ There is a kind of balanced binary search tree named **red-black tree** in the d
 
 For example, the tree in Figure 1 is a red-black tree, while the ones in Figure 2 and 3 are not.
 
-|![rbf1.jpg](~/eff80bd4-c833-4818-9786-81680d1b304a.jpg)|![rbf2.jpg](~/b11184df-eaab-451c-b7d4-7fc1dc82b028.jpg)|![rbf3.jpg](~/625c532b-22fc-47b9-80ea-0537cf00d922.jpg)|
+|![rbf1.jpg](~/eff80bd4-c833-4818-9786-81680d1b304a.jpg)|![rbf2.jpg](~/b11184df-eaab-451c-b7d4-7fc1dc82b028.jpg)|![rbf3.jpg](./statement-assets/625c532b-22fc-47b9-80ea-0537cf00d922.jpg)|
 |:------:|:------:|:------:|
 |Figure 1|Figure 2|Figure 3|
 

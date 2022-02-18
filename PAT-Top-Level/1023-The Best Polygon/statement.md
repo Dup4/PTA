@@ -12,7 +12,7 @@
 
 An $n$-gon is a polygon with $n$ sides. For example, a triangle is a 3-gon. Now you are asked to find the best $n$-gon in a given convex $N$-gon. The vertices of the $n$-gon are selected from vertices of the $N$-gon. The $n$-gon you are supposed to find must have the largest area among all possible $n$-gons, which means that it approximates the $N$-gon the best. The figure below shows the best 6-gon (the shaded part) in a 10-gon.
 
-![6gon.JPG](~/dec24f4d-d76f-4a11-9ae7-d4b9f2628939.JPG)
+![6gon.JPG](./statement-assets/dec24f4d-d76f-4a11-9ae7-d4b9f2628939.JPG)
 
 **Input Specification**
 

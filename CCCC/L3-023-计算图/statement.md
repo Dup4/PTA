@@ -15,7 +15,7 @@ $f(x_1,x_2)=\ln x_1 + x_1 x_2 - \sin x_2$
 的计算图。
 
 
-![figure.png](~/f1986194-8842-45d2-8ae8-5a4eb42752da.png)
+![figure.png](./statement-assets/f1986194-8842-45d2-8ae8-5a4eb42752da.png)
 
 
 现在给定一个计算图，请你根据所有输入变量计算函数值及其偏导数（即梯度）。 例如，给定输入$ x_1 = 2, x_2 = 5 $，上述计算图获得函数值 $ f(2,5)=\ln (2) + 2\times 5 - \sin (5) = 11.652$；并且根据微分链式法则，上图得到的梯度 $\nabla f = [\partial f / \partial x_1 , \partial f / \partial x_2 ] =   [ 1/x_1 + x_2 , x_1 - \cos x_2] = [5.500,1.716]$。

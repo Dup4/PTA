@@ -13,7 +13,7 @@
 In the big cities, the subway systems always look so complex to the visitors. To give you some sense, the following figure shows the map of Beijing subway. Now you are supposed to help people with your computer skills! Given the starting position of your user, your task is to find the quickest way to his/her destination.
 
 
-![subwaymap.jpg](~/55799c23-4bdb-4e32-af7f-6d41accfdd2b.jpg)
+![subwaymap.jpg](./statement-assets/55799c23-4bdb-4e32-af7f-6d41accfdd2b.jpg)
 
 
 **Input Specification**
@@ -31,7 +31,7 @@ After the description of the subway, another positive integer $K$ ($\le$ 10) is 
 The following figure shows the sample map.
 
 
-![samplemap.jpg](~/932c8f1b-7dd5-489d-a774-a91c1fabba7f.jpg)
+![samplemap.jpg](./statement-assets/932c8f1b-7dd5-489d-a774-a91c1fabba7f.jpg)
 
 
 Note: It is guaranteed that all the stations are reachable, and all the queries consist of legal station numbers.

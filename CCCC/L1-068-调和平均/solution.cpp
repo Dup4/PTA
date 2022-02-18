@@ -3,8 +3,7 @@ using namespace std;
 using db = double;
 
 int main() {
-    int n;
-    cin >> n;
+    int n; cin >> n;
     db sum = 0;
     for (int i = 1; i <= n; ++i) {
         db x;

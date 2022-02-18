@@ -11,7 +11,7 @@
     - 内存限制: 64 MB
 
 
-![cat.JPG](~/d5ae2430-b2b4-47b9-aaf6-ad15f5babbf6.JPG)
+![cat.JPG](./statement-assets/d5ae2430-b2b4-47b9-aaf6-ad15f5babbf6.JPG)
 
 
 测量一个人的体积是很难的，但猫就不一样了。因为猫是液体，所以可以很容易地通过测量一个长方体容器的容积来得到容器里猫的体积。本题就请你完成这个计算。

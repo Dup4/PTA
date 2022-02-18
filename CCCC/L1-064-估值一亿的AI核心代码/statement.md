@@ -11,7 +11,7 @@
     - 内存限制: 64 MB
 
 
-![AI.jpg](~/3e7829fa-ed75-4890-acca-54a00fbac9d3.jpg)
+![AI.jpg](./statement-assets/3e7829fa-ed75-4890-acca-54a00fbac9d3.jpg)
 
 
 以上图片来自新浪微博。

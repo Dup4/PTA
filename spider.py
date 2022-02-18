@@ -6,6 +6,8 @@ import os
 from typing import Any, List
 import requests
 import re
+import regex
+import shutil
 
 
 def json_input(path):
@@ -27,6 +29,16 @@ def unique(l: List) -> List:
     return res
 
 
+def url_join(url, *args):
+    url = url.rstrip('/')
+
+    for arg in args:
+        arg = arg.strip('/')
+        url = "{}/{}".format(url, arg)
+
+    return url
+
+
 def ensure_dir(path):
     if not os.path.exists(path):
         os.makedirs(path)
@@ -44,6 +56,11 @@ def init_logging():
     consoleHandler.setFormatter(formatter)
 
     logger.addHandler(consoleHandler)
+
+
+def urllib_download(img_url: str, dist: str):
+    from urllib.request import urlretrieve
+    urlretrieve(img_url, filename=dist)
 
 
 def call_api(url: str) -> str:
@@ -100,6 +117,32 @@ def get_lang_ext(lang: str) -> str:
         return "rs"
 
 
+def download_images(statement: str, dst: str) -> str:
+    STATEMENT_ASSETS = "statement-assets"
+    USER_CONTENT_URL = "https://images.ptausercontent.com/"
+
+    result_statement = statement
+
+    current_dst = os.path.join(dst, STATEMENT_ASSETS)
+    if os.path.exists(current_dst):
+        shutil.rmtree(current_dst)
+    ensure_dir(current_dst)
+
+    for uri in regex.finditer(r"\!\[(.*)\]\((.*)\)", statement):
+        uri = uri.group(2)
+        raw_url = uri.replace("~/", "")
+        url = url_join(USER_CONTENT_URL, raw_url)
+
+        urllib_download(url, os.path.join(current_dst, raw_url))
+        result_statement = result_statement.replace(
+            uri, os.path.join("./", STATEMENT_ASSETS, raw_url))
+
+        logger.info(
+            "download image success. [uri={}, url={}]".format(uri, url))
+
+    return result_statement
+
+
 def download_problem_set(problem_set_id: str, dst: str) -> None:
     ensure_dir(dst)
 
@@ -126,6 +169,7 @@ def download_problem_set(problem_set_id: str, dst: str) -> None:
         statement = statement.replace("$$", "$")
         statement = re.sub(r"### (.*)：", "### \g<1>:", statement)
         statement = re.sub(r"### (.*):", "**\g<1>**", statement)
+        statement = download_images(statement, current_dst)
 
         statement = '''
 # {} {}

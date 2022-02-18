@@ -12,7 +12,7 @@
 
 This is a problem given in the Graduate Entrance Exam in 2018: Which of the following is NOT a topological order obtained from the given directed graph? Now you are supposed to write a program to test each of the options.
 
-![gre.jpg](~/5d35ed2a-4d19-4f13-bf3f-35ed59cebf05.jpg)
+![gre.jpg](./statement-assets/5d35ed2a-4d19-4f13-bf3f-35ed59cebf05.jpg)
 
 **Input Specification**
 

@@ -12,7 +12,7 @@
 
 *Path to Infinity* is a never-ending math mini-game in the RPG Secrets of Grindea. In this mini-game, players are faced with a set of $n$ pressure plates marked with digits from 0 to 9, another set of $(n-1)$ pressure plates marked with operators '+' (addition), '-' (subtraction) or '\*' (multiplication) and a target number $m$ shown in the flame of the green torch on the right. To proceed through this level, players have to step on the pressure plates in the correct order to form an expression whose value is exactly the same with the target number. All the pressure plates must be used exactly once.
 
-![sog.png](~/f75b3fca-784b-4047-8c8d-2cf82ba8a064.png)
+![sog.png](./statement-assets/f75b3fca-784b-4047-8c8d-2cf82ba8a064.png)
 
 Note that in this mini-game, all the operators have the same priority and expression is calculated from left to right. For example, expression $1 + 2 * 2$ will be figured out as $6$, not $5$.
 

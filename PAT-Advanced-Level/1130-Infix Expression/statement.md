@@ -21,7 +21,7 @@ data left_child right_child
 where `data` is a string of no more than 10 characters, `left_child` and `right_child` are the indices of this node's left and right children, respectively. The nodes are indexed from 1 to N. The NULL link is represented by $-1$. The figures 1 and 2 correspond to the samples 1 and 2, respectively.
 
 
-| ![infix1.JPG](~/4d1c4a98-33cc-45ff-820f-c548845681ba.JPG) | ![infix2.JPG](~/b5a3c36e-91ad-494a-8853-b46e1e8b60cc.JPG) | 
+| ![infix1.JPG](~/4d1c4a98-33cc-45ff-820f-c548845681ba.JPG) | ![infix2.JPG](./statement-assets/b5a3c36e-91ad-494a-8853-b46e1e8b60cc.JPG) | 
 | :--------: |:--------: | 
 | Figure 1| Figure 2| 
 

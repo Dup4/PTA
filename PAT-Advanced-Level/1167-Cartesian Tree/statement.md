@@ -13,7 +13,7 @@
 A **Cartesian tree** is a binary tree constructed from a sequence of distinct numbers.  The tree is heap-ordered, and an inorder traversal returns the original sequence.  For example, given the sequence { 8, 15, 3, 4, 1, 5, 12, 10, 18, 6 }, the min-heap Cartesian tree is shown by the figure.
 
 
-![CTree.jpg](~/6a99f68a-6578-46e0-9232-fbf0adf3691f.jpg)
+![CTree.jpg](./statement-assets/6a99f68a-6578-46e0-9232-fbf0adf3691f.jpg)
 
 
 Your job is to output the level-order traversal sequence of the min-heap Cartesian tree.

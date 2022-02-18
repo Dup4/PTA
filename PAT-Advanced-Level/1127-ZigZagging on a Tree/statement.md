@@ -12,7 +12,7 @@
 
 Suppose that all the keys in a binary tree are distinct positive integers.  A unique binary tree can be determined by a given pair of postorder and inorder traversal sequences.  And it is a simple standard routine to print the numbers in level-order.  However, if you think the problem is too simple, then you are too naive.  This time you are supposed to print the numbers in "zigzagging order" -- that is, starting from the root, print the numbers level-by-level, alternating between left to right and right to left.  For example, for the following tree you must output: 1 11 5 8 17 12 20 15.
 
-![zigzag.jpg](~/337cbfb0-a7b2-4500-9664-318e9ffc870e.jpg)
+![zigzag.jpg](./statement-assets/337cbfb0-a7b2-4500-9664-318e9ffc870e.jpg)
 
 **Input Specification**
 

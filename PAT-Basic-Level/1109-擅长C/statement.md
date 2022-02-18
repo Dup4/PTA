@@ -13,7 +13,7 @@
 当你被面试官要求用 C 写一个“Hello World”时，有本事像下图显示的那样写一个出来吗？
 
 
-![HWC.jpg](~/ba3b8678-061d-4fc6-a87e-ce08e1434410.jpg)
+![HWC.jpg](./statement-assets/ba3b8678-061d-4fc6-a87e-ce08e1434410.jpg)
 
 
 **输入格式**

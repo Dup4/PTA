@@ -14,12 +14,12 @@ An AVL tree is a self-balancing binary search tree.  In an AVL tree, the heights
 
 <center>
 
-![F1.jpg](~/8e3c8cca-d5ab-490b-be8b-c7101ffb94a4.jpg)
-![F2.jpg](~/bcdb39fb-08b6-41d8-8a3d-96708e4ad97c.jpg)
+![F1.jpg](./statement-assets/8e3c8cca-d5ab-490b-be8b-c7101ffb94a4.jpg)
+![F2.jpg](./statement-assets/bcdb39fb-08b6-41d8-8a3d-96708e4ad97c.jpg)
 
 
-![](~/33) 
-![](~/34)
+![](./statement-assets/33) 
+![](./statement-assets/34)
 </center>
 Now given a sequence of insertions, you are supposed to tell the root of the resulting AVL tree.
 
