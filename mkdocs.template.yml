@@ -72,9 +72,13 @@ theme:
 plugins:
   - search:
       lang: ja
+  - rss
   - git-revision-date-localized
   - minify:
       minify_html: true
+  - redirects:
+      redirect_maps:
+        "index.md": "CCCC/L1-001-Hello World/index.md"
 
 # Customization
 extra:

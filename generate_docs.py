@@ -130,7 +130,10 @@ def main() -> None:
     with open(NAV_TEMPLATE_YML) as f:
         nav_content = yaml.load(f, Loader=yaml.FullLoader)
 
-    for item in [PAT_BASIC_LEVEL, PAT_ADVANCED_LEVEL, PAT_TOP_LEVEL, CCCC]:
+    if nav_content['nav'] is None:
+        nav_content['nav'] = []
+
+    for item in [CCCC, PAT_TOP_LEVEL, PAT_ADVANCED_LEVEL, PAT_BASIC_LEVEL]:
         current_nav_content = generate_docs(
             os.path.join(TOP_DIR, item), os.path.join(DOCS_DST, item), item)
         nav_content['nav'].append({item: current_nav_content})
