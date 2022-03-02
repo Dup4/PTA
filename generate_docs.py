@@ -30,14 +30,23 @@ def init_logging():
 
     logger.addHandler(consoleHandler)
 
+def get_idx_str(idx: int) -> str:
+    if idx == 0:
+        return ""
 
-def generate_solution_name(solution_prefix: str, src: str, dst: str) -> Iterable:
+    return str(idx)
+
+def generate_tutorial_file_name(tutorial_prefix: str, idx: int) -> str:
+    return "{}{}.md".format(tutorial_prefix, get_idx_str(idx))
+
+
+def generate_solution_file_name(solution_prefix: str, idx: int, src: str, dst: str) -> Iterable:
     LANG_EXT = ["c", "cpp", "java", "py", "go", "js", "sh", "php", "rs"]
     LANG_SLUG = ["C", "C++", "Java", "Python 3",
                  "Go", "Node.Js", "BashScript", "PHP", "Rust"]
 
     for i, ext in enumerate(LANG_EXT):
-        solution_name = "{}.{}".format(solution_prefix, ext)
+        solution_name = "{}{}.{}".format(solution_prefix, get_idx_str(idx), ext)
         solution_src_path = os.path.join(src, solution_name)
         solution_dst_path = os.path.join(dst, solution_name)
         if os.path.exists(solution_src_path):
@@ -47,7 +56,7 @@ def generate_solution_name(solution_prefix: str, src: str, dst: str) -> Iterable
 
 def generate_docs(src: str, dst: str, relative_path: str) -> List:
     STATEMENT_FILE_NAME = "statement.md"
-    TUTORIAL_FILE_NAME = "tutorial.md"
+    TUTORIAL_FILE_NAME = "tutorial"
     SOLUTION_FILE_NAME = "solution"
     INDEX_FILE_NAME = "index.md"
     TEST_DATA_DIR_NAME = "test-data"
@@ -76,31 +85,33 @@ def generate_docs(src: str, dst: str, relative_path: str) -> List:
 --8<-- "{}"
 """.format(statement_src_path)
 
-        tutorial_src_path = os.path.join(current_src, TUTORIAL_FILE_NAME)
-        tutorial_dst_path = os.path.join(current_dst, TUTORIAL_FILE_NAME)
-        if os.path.exists(tutorial_src_path):
-            os.remove(tutorial_dst_path)
-            content += """
-## Tutorial
+        for idx in range(0, 100):
+            tutorial_file_name = generate_tutorial_file_name(TUTORIAL_FILE_NAME, idx)
+            tutorial_src_path = os.path.join(current_src, tutorial_file_name)
+            tutorial_dst_path = os.path.join(current_dst, tutorial_file_name)
+            if os.path.exists(tutorial_src_path):
+                os.remove(tutorial_dst_path)
+                content += """
+## Tutorial{}
 
 ---8<--- "{}"
-""".format(tutorial_src_path)
+""".format(get_idx_str(idx), tutorial_src_path)
 
-        solution_content = ""
-        for solution_src_path, lang_ext, lang_slug in generate_solution_name(SOLUTION_FILE_NAME, current_src, current_dst):
-            solution_content += """
+            solution_content = ""
+            for solution_src_path, lang_ext, lang_slug in generate_solution_file_name(SOLUTION_FILE_NAME, idx, current_src, current_dst):
+                solution_content += """
 === "{}"
 ```{}
 --8<-- "{}"
 ```
 """.format(lang_slug, lang_ext, solution_src_path)
 
-        if len(solution_content) > 0:
-            content += """
-## Solution
+            if len(solution_content) > 0:
+                content += """
+## Solution{}
 
 {}
-""".format(solution_content)
+""".format(get_idx_str(idx), solution_content)
 
         index_path = os.path.join(current_dst, INDEX_FILE_NAME)
         with open(index_path, "w") as f:
