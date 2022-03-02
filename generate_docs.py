@@ -81,7 +81,7 @@ def generate_docs(src: str, dst: str, relative_path: str) -> List:
         if os.path.exists(tutorial_src_path):
             os.remove(tutorial_dst_path)
             content += """
-# Tutorial
+## Tutorial
 
 ---8<--- "{}"
 """.format(tutorial_src_path)
