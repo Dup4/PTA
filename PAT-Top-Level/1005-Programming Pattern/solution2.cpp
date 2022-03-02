@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
 #include <bits/extc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 using namespace __gnu_pbds;
 #define fi first
@@ -8,13 +8,12 @@ const int N = 1048576 + 10;
 int n;
 string s;
 typedef unsigned int ull;
-//map<ull, int> mp, id;
+// map<ull, int> mp, id;
 struct Hash {
     static ull base[N];
     static void init() {
         base[0] = 1;
-        for (int i = 1; i < N; ++i)
-            base[i] = base[i - 1] * 131;
+        for (int i = 1; i < N; ++i) base[i] = base[i - 1] * 131;
     }
     ull a[N];
     //最好改成从1开始，因为查询区间Hash值是前缀和形式
@@ -29,13 +28,14 @@ struct Hash {
         ++l, ++r;
         return a[r] - a[l - 1] * base[r - l + 1];
     }
-}hs;
+} hs;
 ull Hash::base[N] = {0};
-unordered_map <ull, int> mp;
+unordered_map<ull, int> mp;
 int main() {
     Hash::init();
     ios::sync_with_stdio(false);
-    cin.tie(0); cout.tie(0);
+    cin.tie(0);
+    cout.tie(0);
     cin >> n;
     getline(cin, s);
     getline(cin, s);
@@ -49,10 +49,12 @@ int main() {
             Max = mp[val];
             pos = i;
         } else if (mp[val] == Max) {
-            for (int j = 0; j < n; ++j) if (s[pos + j] != s[i + j]) {
-                if (s[pos + j] > s[i + j]) pos = i;
-                break;
-            }
+            for (int j = 0; j < n; ++j)
+                if (s[pos + j] != s[i + j]) {
+                    if (s[pos + j] > s[i + j])
+                        pos = i;
+                    break;
+                }
         }
     }
     cout << s.substr(pos, n) << " " << Max << "\n";
