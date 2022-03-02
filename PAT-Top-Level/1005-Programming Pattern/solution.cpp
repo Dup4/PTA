@@ -1,94 +1,89 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define fi first
-#define se second
-#define SZ(x) (int(x.size()))
-using pII = pair<int, int>;
-const int N = 1.1e6 + 10, INF = 0x3f3f3f3f;
-int n;
-string s;
-
-struct Hash {
-    int seed, mod;
-    int base[N], a[N];
-    void init(int _seed, int _mod, const string &s) {
-        seed = _seed;
-        mod = _mod;
-        base[0] = 1;
-        for (int i = 1; i < N; ++i) {
-            base[i] = 1ll * base[i - 1] * seed % mod;
+const int N = 1048576 * 3 + 10;
+int n; char s[N];
+struct DA {
+    //求SA数组需要用到的中间变量，不需要赋值
+    //c数组的范围为m + 1
+    int t1[N], t2[N], c[N];
+    int sa[N];
+    int Rank[N];
+    int height[N];
+    //待排序的字符串放在str数组中，从str[0] - s[n - 1]长度为n, 最大值小于m
+    int str[N];
+    int n, m;
+    void init(char *s, int m, int n) {
+        this->m = m;
+        this->n = n;
+        for (int i = 0; i < n; ++i) str[i] = s[i];
+        str[n] = 0;
+    }
+    bool cmp(int *r, int a, int b, int l) {
+        return r[a] == r[b] && r[a + l] == r[b + l];
+    }
+    void work() {
+        ++n;
+        int i, j, p, *x = t1, *y = t2;
+        //第一轮基数排序，如果s的最大值很大，可改为快速排序
+        for (i = 0; i < m; ++i) c[i] = 0;
+        for (i = 0; i < n; ++i) c[x[i] = str[i]]++;
+        for (i = 1; i < m; ++i) c[i] += c[i - 1];
+        for (i = n - 1; i >= 0; --i) sa[--c[x[i]]] = i;
+        for (j = 1; j <= n; j <<= 1) {
+            p = 0;
+            //直接利用sa数组排序第二关键字
+            //后面的j个数第二关键字为空的最小
+            for (i = n - j; i < n; ++i) {
+                y[p++] = i;
+            }
+            for (i = 0; i < n; ++i) if (sa[i] >= j) y[p++] = sa[i] - j;
+            //这样数组y保存的就是按照第二关键字排序的结果
+            //基数排序第一关键字
+            for (i = 0; i < m; ++i) c[i] = 0;
+            for (i = 0; i < n; ++i) c[x[y[i]]]++;
+            for (i = 1; i < m; ++i) c[i] += c[i - 1];
+            for (i = n - 1; i >= 0; --i) sa[--c[x[y[i]]]] = y[i];
+            //根据sa和x数组计算新的x数组
+            swap(x, y);
+            p = 1; x[sa[0]] = 0;
+            for (i = 1; i < n; ++i) {
+                x[sa[i]] = cmp(y, sa[i - 1], sa[i], j) ? p - 1 : p++;
+            }
+            if (p >= n) break;
+            //下次基数排序的最大值
+            m = p;
         }
-        a[0] = 0;
-        for (int i = 1; i < SZ(s); ++i) {
-            a[i] = (1ll * a[i - 1] * seed % mod + s[i]) % mod;
+        int k = 0;
+        --n;
+        for (i = 0; i <= n; ++i) Rank[sa[i]] = i;
+        //build height
+        for (i = 0; i < n; ++i) {
+            if (k) --k;
+            j = sa[Rank[i] - 1];
+            while (str[i + k] == str[j + k]) ++k;
+            height[Rank[i]] = k;
         }
     }
-    inline int get(int l, int r) {
-        return (a[r] - 1ll * a[l - 1] * base[r - l + 1] % mod + mod) % mod;
-    }
-} hs;
-
-inline bool ok(int x, int y) {
-    if (hs.get(x, x + n - 1) == hs.get(y, y + n - 1))
-        return false;
-    int l = 1, r = n, res = 0;
-    while (r - l >= 0) {
-        int mid = (l + r) >> 1;
-        if (hs.get(x, x + mid - 1) == hs.get(y, y + mid - 1)) {
-            res = mid;
-            l = mid + 1;
-        } else {
-            r = mid - 1;
-        }
-    }
-    if (res < n && s[x + res] > s[y + res])
-        return true;
-    return false;
-}
-
-struct node {
-    int ix, val, num;
-    node() {}
-    node(int ix, int val, int num) : ix(ix), val(val), num(num) {}
-};
-
+}da;
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    cout.tie(0);
-    cin >> n;
-    getline(cin, s);
-    getline(cin, s);
-    s.insert(0, "0");
-    hs.init(233, 998244353, s);
-    vector<node> vec, _vec;
-    for (int i = 1; i + n <= SZ(s); ++i) {
-        vec.emplace_back(i, hs.get(i, i + n - 1), 1);
+    scanf("%d\n%[^\n]", &n, s);
+    int len = strlen(s);
+    da.init(s, 128, len);
+    da.work();
+//    da.work(s, len, 128);
+    int pre = 1, Max = 1, pos = da.sa[1];
+    for (int i = 2; i <= len; ++i) {
+        if (da.height[i] >= n) {
+            ++pre;
+            if (pre > Max) {
+                Max = pre;
+                pos = da.sa[i];
+            }
+        } else {
+            pre = 1;
+        }
     }
-    sort(vec.begin(), vec.end(), [&](node a, node b) {
-        return a.val < b.val;
-    });
-    _vec.push_back(vec.back());
-    vec.pop_back();
-    while (!vec.empty()) {
-        node tmp = vec.back();
-        vec.pop_back();
-        if (tmp.val == _vec.back().val)
-            ++_vec.back().num;
-        else
-            _vec.push_back(tmp);
-    }
-    sort(_vec.begin(), _vec.end(), [&](node a, node b) {
-        return a.num > b.num;
-    });
-    node res = _vec[0];
-    for (int i = 1; i < SZ(_vec); ++i) {
-        node now = _vec[i];
-        if (res.num > now.num)
-            break;
-        else if (ok(res.ix, now.ix))
-            res = now;
-    }
-    cout << s.substr(res.ix, n) << " " << res.num << "\n";
+    s[pos + n] = 0;
+    printf("%s %d\n", s + pos, Max);
     return 0;
 }
