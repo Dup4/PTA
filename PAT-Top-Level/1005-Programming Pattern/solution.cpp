@@ -1,10 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 1048576 * 3 + 10;
-int n; char s[N];
+int n;
+char s[N];
 struct DA {
     //求SA数组需要用到的中间变量，不需要赋值
-    //c数组的范围为m + 1
+    // c数组的范围为m + 1
     int t1[N], t2[N], c[N];
     int sa[N];
     int Rank[N];
@@ -36,7 +37,9 @@ struct DA {
             for (i = n - j; i < n; ++i) {
                 y[p++] = i;
             }
-            for (i = 0; i < n; ++i) if (sa[i] >= j) y[p++] = sa[i] - j;
+            for (i = 0; i < n; ++i)
+                if (sa[i] >= j)
+                    y[p++] = sa[i] - j;
             //这样数组y保存的就是按照第二关键字排序的结果
             //基数排序第一关键字
             for (i = 0; i < m; ++i) c[i] = 0;
@@ -45,32 +48,35 @@ struct DA {
             for (i = n - 1; i >= 0; --i) sa[--c[x[y[i]]]] = y[i];
             //根据sa和x数组计算新的x数组
             swap(x, y);
-            p = 1; x[sa[0]] = 0;
+            p = 1;
+            x[sa[0]] = 0;
             for (i = 1; i < n; ++i) {
                 x[sa[i]] = cmp(y, sa[i - 1], sa[i], j) ? p - 1 : p++;
             }
-            if (p >= n) break;
+            if (p >= n)
+                break;
             //下次基数排序的最大值
             m = p;
         }
         int k = 0;
         --n;
         for (i = 0; i <= n; ++i) Rank[sa[i]] = i;
-        //build height
+        // build height
         for (i = 0; i < n; ++i) {
-            if (k) --k;
+            if (k)
+                --k;
             j = sa[Rank[i] - 1];
             while (str[i + k] == str[j + k]) ++k;
             height[Rank[i]] = k;
         }
     }
-}da;
+} da;
 int main() {
     scanf("%d\n%[^\n]", &n, s);
     int len = strlen(s);
     da.init(s, 128, len);
     da.work();
-//    da.work(s, len, 128);
+    //    da.work(s, len, 128);
     int pre = 1, Max = 1, pos = da.sa[1];
     for (int i = 2; i <= len; ++i) {
         if (da.height[i] >= n) {
